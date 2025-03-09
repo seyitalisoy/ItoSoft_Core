@@ -1,0 +1,14 @@
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\bin\Debug\net8.0\Core.deps.json
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\bin\Debug\net8.0\Core.runtimeconfig.json
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\bin\Debug\net8.0\Core.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\bin\Debug\net8.0\Core.pdb
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.csproj.AssemblyReference.cache
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.AssemblyInfoInputs.cache
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.AssemblyInfo.cs
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.csproj.CoreCompileInputs.cache
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\refint\Core.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.pdb
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.genruntimeconfig.cache
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\ref\Core.dll
