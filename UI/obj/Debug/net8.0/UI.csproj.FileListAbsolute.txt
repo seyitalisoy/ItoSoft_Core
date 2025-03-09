@@ -191,3 +191,5 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\Autofac.Extensions.D
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\FluentValidation.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.sourcelink.json
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

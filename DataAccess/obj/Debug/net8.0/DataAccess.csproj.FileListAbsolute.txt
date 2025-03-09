@@ -17,3 +17,4 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\refint\DataA
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json

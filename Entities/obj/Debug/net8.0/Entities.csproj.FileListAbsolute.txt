@@ -13,3 +13,4 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\Entities\obj\Debug\net8.0\Entities.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Entities\obj\Debug\net8.0\refint\Entities.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Entities\obj\Debug\net8.0\Entities.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Entities\obj\Debug\net8.0\ref\Entities.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Entities\obj\Debug\net8.0\Entities.sourcelink.json

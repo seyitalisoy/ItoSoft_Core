@@ -2,6 +2,11 @@
 
 <h2>Kategori Ekle</h2>
 
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
+
 <form asp-action="Add" method="post">
     <div class="form-group">
         <label asp-for="CategoryName">Kategori Adı</label>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -31,6 +32,12 @@ namespace Business.Concrete
                 //string errorMessages = string.Join("\n", validationResult.Errors.Select(e => e.ErrorMessage));
                 return new ErrorResult();
             }
+
+            IResult result = BusinessRules.Run(CheckIfCategoryNameExist(entity.CategoryName), CheckIfCategoryLimitExceded());
+            if (result!=null)
+            {
+                return result;
+            }
             _categoryDal.Add(entity);
             return new SuccessResult(Messages.CategoryAdded);
         }
@@ -54,6 +61,25 @@ namespace Business.Concrete
         public IResult Update(Category entity)
         {
             _categoryDal.Update(entity);
+            return new SuccessResult();
+        }
+
+        private IResult CheckIfCategoryNameExist(string categoryName)
+        {
+            var result = _categoryDal.GetAll(c=>c.CategoryName==categoryName).Any();
+            if (result)
+            {
+                return new ErrorResult(Messages.CategoryNameAlreadyExists);
+            }
+            return new SuccessResult();
+        }
+        private IResult CheckIfCategoryLimitExceded()
+        {
+            var result = _categoryDal.GetAll().Count();
+            if (result>=6)
+            {
+                return new ErrorResult(Messages.CategoryLimitExceded);
+            }
             return new SuccessResult();
         }
     }

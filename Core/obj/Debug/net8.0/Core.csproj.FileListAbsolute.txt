@@ -12,3 +12,4 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\refint\Core.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.genruntimeconfig.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\ref\Core.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Core\obj\Debug\net8.0\Core.sourcelink.json
