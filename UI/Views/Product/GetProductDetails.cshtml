@@ -1,33 +1,44 @@
 ﻿@model ProductDetailViewModel
 
 <div class="container mt-4">
-    <div class="card">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="@Model.Picture" class="img-fluid rounded-start" alt="@Model.ProductName">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h3 class="card-title">@Model.ProductName</h3>
-                    <h5 class="text-muted">Kategori: @Model.CategoryName</h5>
-                    <p class="card-text">@Model.Description</p>
-                    <p class="card-text"><strong>Fiyat:</strong> @Model.Price.ToString("C")</p>
-                    <p class="card-text">
-                        <strong>Stok Durumu:</strong>
-                        @if (Model.UnitsInStock > 0)
-                        {
-                            <span class="text-success">Stokta Var (@Model.UnitsInStock adet)</span>
-                        }
-                        else
-                        {
-                            <span class="text-danger">Stokta Yok</span>
-                        }
-                    </p>
-                    @* dinamik geri dönüş *@
-                    <a href="@Context.Request.Headers["Referer"]" class="btn btn-secondary">Geri Dön</a>
+	<div class="card">
+		<div class="row g-0">
+			<div class="col-md-4">
+				<img src="@Model.Picture" class="img-fluid rounded-start" alt="@Model.ProductName">
+			</div>
+			<div class="col-md-8">
+				<div class="card-body">
+					<h3 class="card-title">@Model.ProductName</h3>
+					<h5 class="text-muted">Kategori: @Model.CategoryName</h5>
+					<p class="card-text">@Model.Description</p>
+					<p class="card-text"><strong>Fiyat:</strong> @Model.Price.ToString("C")</p>
+					<p class="card-text">
+						<strong>Stok Durumu:</strong>
+						@if (Model.UnitsInStock > 0)
+						{
+							<span class="text-success">Stokta Var (@Model.UnitsInStock adet)</span>
+						}
+						else
+						{
+							<span class="text-danger">Stokta Yok</span>
+						}
+					</p>
+					@* dinamik geri dönüş *@
 
-                </div>
-            </div>
-        </div>
-    </div>
+					<form asp-controller="Cart" asp-action="AddToCart" method="post" @* class="d-inline" *@>
+						<input type="hidden" name="productId" value="@Model.ProductId" />
+						<button type="submit" class="btn btn-outline-success btn-sm float-end">
+							<i class="bi bi-cart"></i>
+						</button>
+					</form>
+
+
+					<a href="@Context.Request.Headers["Referer"]" class="btn btn-secondary">Geri Dön</a>
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

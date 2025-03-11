@@ -73,7 +73,7 @@ namespace Business.Concrete
             //    return result;
             //}
             _productDal.Update(entity);
-            return new SuccessResult();
+            return new SuccessResult("Ürün başarıyla güncellendi.");
         }
 
         private IResult CheckIfProductNameExist(string productName)

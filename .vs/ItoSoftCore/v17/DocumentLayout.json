@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\shared\\_productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\shared\\_productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\business\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|solutionrelative:business\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\helpers\\cart\\sessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\helpers\\cart\\sessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Product\\Index.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "UI\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAGoAAAAPAAAAAAAAAA==",
+              "Title": "_ProductList.cshtml",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Shared\\_ProductList.cshtml",
+              "RelativeDocumentMoniker": "UI\\Views\\Shared\\_ProductList.cshtml",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Shared\\_ProductList.cshtml",
+              "RelativeToolTip": "UI\\Views\\Shared\\_ProductList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-11T06:09:30.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "UI\\Controllers\\ProductController.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "UI\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAgwK8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T13:22:02.946Z",
+              "WhenOpened": "2025-03-11T12:48:49.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductManager.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Concrete\\ProductManager.cs",
-              "RelativeDocumentMoniker": "Business\\Concrete\\ProductManager.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Concrete\\ProductManager.cs",
-              "RelativeToolTip": "Business\\Concrete\\ProductManager.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Title": "SessionHelper.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Helpers\\Cart\\SessionHelper.cs",
+              "RelativeDocumentMoniker": "UI\\Helpers\\Cart\\SessionHelper.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Helpers\\Cart\\SessionHelper.cs",
+              "RelativeToolTip": "UI\\Helpers\\Cart\\SessionHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T13:21:33.749Z",
+              "WhenOpened": "2025-03-11T12:34:51.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\CartController.cs",
+              "RelativeToolTip": "UI\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAswGMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T12:33:17.07Z",
               "EditorCaption": ""
             }
           ]

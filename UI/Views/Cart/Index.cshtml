@@ -1,0 +1,320 @@
+﻿@model List<CartItem>
+
+<h2>Sepetiniz</h2>
+
+@if (!Model.Any())
+{
+	<p>Sepetiniz boş.</p>
+}
+else
+{
+	<table class="table">
+		<tr>
+			<th>Ürün</th>
+			<th>Fiyat</th>
+			<th>Adet</th>
+			<th></th>
+			<th></th>
+		</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.ProductName</td>
+				<td>@item.Price</td>
+				<td>@item.Quantity</td>
+				@* <td>@(item.Price * item.Quantity)</td> *@
+				@*           <td>
+                    <div class="quantity-control">
+                        <!-- Miktarı azaltma butonu -->
+                        <a href="@Url.Action("DecreaseQuantity", "Cart", new { productId = item.ProductId })" class="quantity-btn">-</a>
+                        <h1>@item.Quantity</h1>
+                        <!-- Miktarı artırma butonu -->
+                        <a href="@Url.Action("IncreaseQuantity", "Cart", new { productId = item.ProductId })" class="quantity-btn">+</a>
+                    </div>
+                </td> *@
+
+				<td>
+					<div class="quantity-control">
+						<!-- Miktarı azaltma butonu -->
+						<a href="javascript:void(0);" class="quantity-btn" data-product-id="@item.ProductId" data-action="decrease" id="decrease-btn-@item.ProductId"
+						@(item.Quantity == 1 ? "disabled='disabled'" : "")> - </a>
+						<h1 id="quantity-@item.ProductId">@item.Quantity</h1> <!-- Miktar burada gösterilecek -->
+						<!-- Miktarı artırma butonu -->
+						<a href="javascript:void(0);" class="quantity-btn" data-product-id="@item.ProductId" data-action="increase"> + </a>
+					</div>
+				</td>
+
+
+				<td>
+					<a asp-action="RemoveFromCart" asp-route-productId="@item.ProductId" class="btn btn-danger">Sil</a>
+				</td>
+			</tr>
+		}
+	</table>
+	<a href="@Context.Request.Headers["Referer"]" class="btn btn-secondary">Geri Dön</a>
+	<a asp-action="ClearCart" class="btn btn-warning">Sepeti Temizle</a>
+	<a asp-controller="Order" asp-action="Checkout" class="btn btn-success">Siparişi Tamamla</a>
+}
+
+<style>
+	.remove-item {
+		margin-left: 20px; /* Sağ tarafa biraz boşluk bırak */
+	}
+
+		.remove-item a {
+			font-size: 20px; /* Çöp kutusu boyutunu ayarla */
+			color: red;
+			text-decoration: none;
+		}
+
+			.remove-item a:hover {
+				color: darkred;
+			}
+
+	.product-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid #ccc;
+		padding: 15px;
+		width: 70%; /* Tabloyu daraltmak için genişliği %70 olarak ayarladım */
+		margin-bottom: 15px;
+		border-radius: 8px;
+		position: relative; /* Remove butonunun yerini doğru ayarlamak için */
+		box-sizing: border-box;
+	}
+
+
+	.quantity-control {
+		display: flex;
+		align-items: center;
+	}
+
+	.quantity-btn {
+		font-size: 18px;
+		color: #d9534f; /* Kırmızı */
+		text-decoration: none;
+		padding: 5px;
+		margin: 3px 0;
+		width: 30px;
+		text-align: center;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: #f8f9fa;
+	}
+
+		.quantity-btn:hover {
+			background-color: #f1f1f1;
+		}
+
+	.total-price {
+		margin-top: 30px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.checkout-btn {
+		background-color: #28a745;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+		display: block;
+		margin: 20px auto;
+		width: 200px;
+	}
+
+		.checkout-btn:hover {
+			background-color: #218838;
+		}
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Arial, sans-serif;
+	}
+
+	h2 {
+		text-align: center;
+		margin-top: 80px; /* Navbar ile çakışmayı engellemek için üstte boşluk bıraktım */
+	}
+
+	.product-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 20px;
+		width: 100%; /* Sayfanın genişliği kadar kullanabilmesi için */
+	}
+
+	.product-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid #ccc;
+		padding: 15px;
+		width: 70%; /* Tabloyu daraltmak için genişliği %70 olarak ayarladım */
+		margin-bottom: 15px;
+		border-radius: 8px;
+		position: relative;
+		box-sizing: border-box;
+	}
+
+	.product-img {
+		width: 60px; /* Fotoğraf boyutunu daha da küçülttüm */
+		height: 60px;
+		object-fit: cover;
+		margin-right: 20px;
+	}
+
+	.product-details {
+		flex-grow: 1;
+		padding-right: 15px;
+	}
+
+
+
+	.total-price {
+		margin-top: 30px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.checkout-btn {
+		background-color: #28a745;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+		display: block;
+		margin: 20px auto;
+		width: 200px;
+	}
+
+		.checkout-btn:hover {
+			background-color: #218838;
+		}
+
+	.quantity-control {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px; /* Butonlar ve miktar arasındaki boşluğu ayarlamak için */
+	}
+
+	.quantity-btn {
+		font-size: 18px;
+		color: #d9534f; /* Kırmızı */
+		text-decoration: none;
+		padding: 5px;
+		width: 30px;
+		text-align: center;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: #f8f9fa;
+	}
+
+		.quantity-btn:hover {
+			background-color: #f1f1f1;
+		}
+
+	.quantity-text {
+		margin: 0;
+		font-size: 16px;
+	}
+
+	.quantity-btn {
+		font-size: 18px;
+		color: #d9534f; /* Kırmızı */
+		text-decoration: none;
+		padding: 5px;
+		margin: 3px 0; /* Butonlar arasındaki boşluk */
+		width: 30px;
+		text-align: center;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: #f8f9fa;
+	}
+
+		.quantity-btn:hover {
+			background-color: #f1f1f1;
+		}
+</style>
+
+<!-- jQuery CDN Bağlantısını Ekleyin -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- JavaScript Kodunu Sayfanın Sonunda veya $(document).ready() içinde ekleyin -->
+<script>
+			$(document).ready(function () {
+		$(".quantity-btn").on("click", function () {
+			var action = $(this).data("action");  // 'increase' veya 'decrease'
+			var productId = $(this).data("product-id");  // Ürün ID'sini al
+			var quantityElement = $("#quantity-" + productId);  // Miktar gösterilen elemanı al
+			var decreaseBtn = $("#decrease-btn-" + productId);  // Azaltma butonunu al
+
+			if (action === "decrease" && quantityElement.text() == 1) {
+				// Miktar 1 ise, azaltma işlemi yapılmasın
+				alert("Miktar 1'den daha az olamaz.");
+				return;  // Eğer miktar 1 ise, işlemi durdur
+			}
+
+			$.ajax({
+				url: "/Cart/" + (action === "increase" ? "IncreaseQuantity" : "DecreaseQuantity") + "?productId=" + productId, // İlgili action'a yönlendir
+				type: "GET",
+				success: function (response) {
+					if (response.success) {
+						// Yeni miktarı güncelle
+						quantityElement.text(response.newQuantity);
+
+						// Eğer miktar 1'e düşerse, azaltma butonunu devre dışı bırak
+						if (response.newQuantity === 1) {
+							decreaseBtn.prop('disabled', true);  // Butonu devre dışı bırak
+						} else {
+							decreaseBtn.prop('disabled', false);  // Butonu aktif tut
+						}
+					} else {
+						alert(response.message || "Bir hata oluştu. Lütfen tekrar deneyin.");
+					}
+				},
+				error: function () {
+					alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+				}
+			});
+		});
+	});
+
+
+</script>
+
+
+@* <script>
+    $(document).ready(function () {
+        $(".quantity-btn").on("click", function () {
+            var action = $(this).data("action");  // 'increase' veya 'decrease'
+            var productId = $(this).data("product-id");  // Ürün ID'sini al
+            var quantityElement = $("#quantity-" + productId);  // Miktar gösterilen elemanı al
+
+            $.ajax({
+                url: "/Cart/" + (action === "increase" ? "IncreaseQuantity" : "DecreaseQuantity") + "?productId=" + productId, // İlgili action'a yönlendir
+                type: "GET",
+                success: function (response) {
+                    // Başarılı yanıt alındığında
+                    if (response.success) {
+                        // Yeni miktarı güncelle
+                        quantityElement.text(response.newQuantity);
+                    } else {
+                        alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+                    }
+                },
+                error: function () {
+                    alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+                }
+            });
+        });
+    });
+</script>
+
+ *@

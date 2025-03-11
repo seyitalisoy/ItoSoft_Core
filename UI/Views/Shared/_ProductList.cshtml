@@ -10,11 +10,22 @@
                 <p class="card-text">@item.Description</p>
             </div>
             <div class="card-footer">
-                <small class="text-muted">@item.Price</small>
+                <small class="text-muted">@item.Price ₺</small>
                 <a class="btn btn-primary btn-sm float-end" href="/Product/GetProductDetails/@item.ProductId">
-                    <i class="fa-solid fa-angeles-right"></i>Ürün Detay
+                    <i class="fa-solid fa-angle-right"></i> Ürün Detay
                 </a>
+                <form asp-controller="Cart" asp-action="AddToCart" method="post" class="d-inline">
+                    <input type="hidden" name="productId" value="@item.ProductId" />
+                    <button type="submit" class="btn btn-outline-success btn-sm float-end">
+                        <i class="bi bi-cart"></i>
+                    </button>
+                </form>
+           @*      <a href="/Cart/AddToCart/@item.ProductId" class="btn btn-outline-success btn-sm float-end">
+                    <i class="bi bi-cart"></i>
+                </a> *@
+
             </div>
+
         </div>
     </div>
 }

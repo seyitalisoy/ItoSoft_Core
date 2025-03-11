@@ -129,7 +129,7 @@ namespace UI.Controllers
             var result = _productService.Update(updatedProduct);
             if (result.Success)
             {
-                TempData["SuccessMessage"] = result.Message;
+                TempData["UpdateSuccessMessage"] = result.Message;
                 return RedirectToAction("Index");
             }
             ViewBag.ErrorMessage = result.Message;
@@ -142,6 +142,7 @@ namespace UI.Controllers
             var categoryName = _categoryService.GetById(result.CategoryId).Data.CategoryName;
             var model = new ProductDetailViewModel()
             {
+                ProductId = id, 
                 CategoryName = categoryName,
                 Picture = result.Picture,
                 Description = result.Description,

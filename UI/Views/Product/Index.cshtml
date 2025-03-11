@@ -17,6 +17,10 @@
 		@TempData["DeleteSuccess"]
 	</div>
 }
+@if (TempData["UpdateSuccessMessage"] != null)
+{
+	<h6 class="alert alert-danger">@TempData["UpdateSuccessMessage"]</h6>
+}
 <!-- Silme Onay Modal -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
