@@ -11,10 +11,10 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.G
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json

@@ -1,0 +1,46 @@
+﻿@model List<Category>
+
+<ul class="list-group">
+    @if (ViewBag.Id == 0)
+    {
+        <a class="list-group-item active" href="/Product/List/">
+            <i class="fa-solid fa-angles-right"></i>
+            Tüm Kategoriler
+        </a>
+    }
+    else
+    {
+        <a class="list-group-item" href="/Product/List/">
+            <i class="fa-solid fa-angles-right"></i>
+            Tüm Kategoriler
+        </a>
+    }
+
+    @foreach (var category in Model)
+    {
+        if (ViewBag.Id != 0)
+        {
+            if (category.CategoryId == ViewBag.Id)
+            {
+                <a class="list-group-item active" href="/Product/List/@category.CategoryId">
+                    <i class="fa-solid fa-angles-right"></i>
+                    @category.CategoryName
+                </a>
+            }
+            else
+            {
+                <a class="list-group-item" href="/Product/List/@category.CategoryId">
+                    <i class="fa-solid fa-angles-right"></i>
+                    @category.CategoryName
+                </a>
+            }
+        }
+        else
+        {
+            <a class="list-group-item" href="/Product/List/@category.CategoryId">
+                <i class="fa-solid fa-angles-right"></i>
+                @category.CategoryName
+            </a>
+        }
+    }
+</ul>

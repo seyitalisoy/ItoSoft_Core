@@ -1,0 +1,86 @@
+﻿@model ProductUpdateViewModel
+
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+@if (ViewBag.ErrorMessage != null)
+{
+    <h6 class="alert alert-danger">@ViewBag.ErrorMessage</h6>
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h2>Ürün Güncelle</h2>
+
+        <div asp-validation-summary=ModelOnly class="alert alert-danger" role="alert">
+        </div>
+
+        <form asp-controller="Product" asp-action="Update" method="post">
+
+            <input type="hidden" asp-for="ProductId" />
+
+            <div class="row mb-3">
+                <label for="ProductName" class="col-md-4 col-form-label" asp-for="ProductName"></label>
+                <div class="col-md-8 ">
+                    <input asp-for="ProductName" class="form-control">
+                    <span class="text-danger" asp-validation-for="ProductName"></span>
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <label for="CategoryId" class="col-md-4 col-form-label" asp-for="CategoryId"></label>
+                <div class="col-md-8">
+                    <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+                        <option value="">Seçiniz...</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="CategoryId"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Price" class="col-md-4 col-form-label" asp-for="Price"></label>
+                <div class="col-md-8">
+                    <input asp-for="Price" class="form-control">
+                    <span class="text-danger" asp-validation-for="Price"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="UnitsInStock" class="col-md-4 col-form-label" asp-for="UnitsInStock"></label>
+                <div class="col-md-8">
+
+                    <input asp-for="UnitsInStock" class="form-control">
+                    <span class="text-danger" asp-validation-for="UnitsInStock"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Picture" class="col-md-4 col-form-label" asp-for="Picture"></label>
+                <div class="col-md-8">
+                    <input asp-for="Picture" class="form-control">
+                    <span class="text-danger" asp-validation-for="Picture"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Description" class="col-md-4 col-form-label" asp-for="Description"></label>
+                <div class="col-md-8">
+                    <input asp-for="Description" class="form-control">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+                </div>
+            </div>
+
+
+            <div class="row mb-3">
+                <div class="col-md-8 offset-md-4">
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                </div>                               
+            </div>
+            <a href="@Context.Request.Headers["Referer"]" class="btn btn-secondary">Geri Dön</a>
+
+
+        </form>
+    </div>
+</div>

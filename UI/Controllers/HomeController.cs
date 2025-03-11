@@ -1,16 +1,19 @@
 using System.Diagnostics;
+using Entities.Concrete.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using UI.Models;
+using UI.Models.Identity;
 
 namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly UserManager<AppUser> _userManager;
+        public HomeController(UserManager<AppUser> userManager)
         {
-            _logger = logger;
+            _userManager = userManager;
         }
 
         public IActionResult Index()
@@ -18,15 +21,36 @@ namespace UI.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult SignUp()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public async Task<IActionResult> SignUp(SignUpViewModel request)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var identityResult = await _userManager.CreateAsync(new AppUser()
+            {
+                UserName = request.UserName,
+                Email = request.Email,
+                PhoneNumber = request.Phone,
+            },request.PasswordConfirm);
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            if (identityResult.Succeeded)
+            {
+                TempData["SuccessMessage"] = "Üyelik kayýt iþlemi baþarýlý.";
+                return RedirectToAction("SignUp");
+            }
+
+            foreach (IdentityError item in identityResult.Errors)
+            {
+                ModelState.AddModelError(string.Empty, item.Description);
+            }
+            return View();
         }
     }
 }

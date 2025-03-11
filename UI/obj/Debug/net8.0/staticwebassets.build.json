@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6rxpt8TQz5oDFR+LhHYJavXKOcaOgKUJpqQHM0Izhfc=",
+  "Hash": "AST6mW7q9Wuc2Ntpe8kRISty9ReCMVexeRHBYDR6G0o=",
   "Source": "UI",
   "BasePath": "_content/UI",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "cxa9gsyh20",
-      "Integrity": "kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=",
+      "Fingerprint": "q5e37319hz",
+      "Integrity": "kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\UI.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "cxa9gsyh20",
-      "Integrity": "kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=",
+      "Fingerprint": "q5e37319hz",
+      "Integrity": "kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UI.bundle.scp.css"
@@ -6251,7 +6251,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1120"
+          "Value": "2252"
         },
         {
           "Name": "Content-Type",
@@ -6259,11 +6259,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=\""
+          "Value": "\"kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Mar 2025 09:22:29 GMT"
+          "Value": "Mon, 10 Mar 2025 12:53:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6273,12 +6273,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA="
+          "Value": "sha256-kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k="
         }
       ]
     },
     {
-      "Route": "UI.cxa9gsyh20.bundle.scp.css",
+      "Route": "UI.q5e37319hz.bundle.scp.css",
       "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UI.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6288,7 +6288,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1120"
+          "Value": "2252"
         },
         {
           "Name": "Content-Type",
@@ -6296,11 +6296,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=\""
+          "Value": "\"kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Mar 2025 09:22:29 GMT"
+          "Value": "Mon, 10 Mar 2025 12:53:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6310,7 +6310,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "cxa9gsyh20"
+          "Value": "q5e37319hz"
         },
         {
           "Name": "label",
@@ -6318,12 +6318,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA="
+          "Value": "sha256-kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k="
         }
       ]
     },
     {
-      "Route": "UI.cxa9gsyh20.styles.css",
+      "Route": "UI.q5e37319hz.styles.css",
       "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\UI.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6333,7 +6333,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1120"
+          "Value": "2252"
         },
         {
           "Name": "Content-Type",
@@ -6341,11 +6341,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=\""
+          "Value": "\"kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Mar 2025 09:22:29 GMT"
+          "Value": "Mon, 10 Mar 2025 12:53:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6355,7 +6355,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "cxa9gsyh20"
+          "Value": "q5e37319hz"
         },
         {
           "Name": "label",
@@ -6363,7 +6363,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA="
+          "Value": "sha256-kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k="
         }
       ]
     },
@@ -6378,7 +6378,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1120"
+          "Value": "2252"
         },
         {
           "Name": "Content-Type",
@@ -6386,11 +6386,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=\""
+          "Value": "\"kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 07 Mar 2025 09:22:29 GMT"
+          "Value": "Mon, 10 Mar 2025 12:53:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6400,7 +6400,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA="
+          "Value": "sha256-kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k="
         }
       ]
     }

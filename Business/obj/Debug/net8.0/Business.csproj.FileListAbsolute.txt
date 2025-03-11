@@ -12,9 +12,9 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.Gener
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.AssemblyInfoInputs.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.AssemblyInfo.cs
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.csproj.CoreCompileInputs.cache
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.sourcelink.json
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.csproj.Up2Date
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\refint\Business.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\ref\Business.dll
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\Business\obj\Debug\net8.0\Business.sourcelink.json

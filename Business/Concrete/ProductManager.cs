@@ -5,9 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using FluentValidation.Results;
 
 namespace Business.Concrete
 {
@@ -22,6 +25,18 @@ namespace Business.Concrete
 
         public IResult Add(Product entity)
         {
+            var validator = new ProductValidator();
+            ValidationResult validationResult = validator.Validate(entity);
+            if (!validationResult.IsValid)
+            {
+                //string errorMessages = string.Join("\n", validationResult.Errors.Select(e => e.ErrorMessage));
+                return new ErrorResult();
+            }
+            var result = BusinessRules.Run(CheckIfProductNameExist(entity.ProductName));
+            if (result != null)
+            {
+                return result;
+            }
             _productDal.Add(entity);
             return new SuccessResult(Messages.ProductAdded);
         }
@@ -45,8 +60,31 @@ namespace Business.Concrete
 
         public IResult Update(Product entity)
         {
+            var validator = new ProductValidator();
+            ValidationResult validationResult = validator.Validate(entity);
+            if (!validationResult.IsValid)
+            {
+                //string errorMessages = string.Join("\n", validationResult.Errors.Select(e => e.ErrorMessage));
+                return new ErrorResult();
+            }
+            //var result = BusinessRules.Run(CheckIfProductNameExist(entity.ProductName));
+            //if (result != null)
+            //{
+            //    return result;
+            //}
             _productDal.Update(entity);
             return new SuccessResult();
+        }
+
+        private IResult CheckIfProductNameExist(string productName)
+        {
+            var result = _productDal.GetAll().Where(p=>p.ProductName==productName).Any();
+            if (result)
+            {
+                return new ErrorResult(Messages.ProductNameAlreadyExists);
+            }
+            return new SuccessResult();
+
         }
 
 
