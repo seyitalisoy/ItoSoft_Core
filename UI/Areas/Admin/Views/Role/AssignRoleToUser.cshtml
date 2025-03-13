@@ -1,0 +1,90 @@
+﻿@model UserRoleInfoViewModel
+
+@{
+    ViewData["Title"] = "Rol Ata";
+}
+
+<h1>Rol Ata</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form id="roleAssignForm" class="mt-4">
+            @Html.AntiForgeryToken()
+            <div class="row">
+                @for (int i = 0; i < Model.AssignRoleToUserViewModel.Count; i++)
+                {
+                    <div class="mb-3 col-md-6">
+                        <div class="form-check">
+                            <input type="checkbox" id="role_@i" class="form-check-input role-checkbox"
+                                   data-roleid="@Model.AssignRoleToUserViewModel[i].RoleId"
+                                   data-rolename="@Model.AssignRoleToUserViewModel[i].RoleName">
+                            <label for="role_@i" class="form-check-label">@Model.AssignRoleToUserViewModel[i].RoleName</label>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="mt-4">
+                <a class="btn btn-secondary" onclick="history.back()">Geri dön</a>
+                <button type="button" class="btn btn-primary ms-4" id="submitRoles">Rolü Ata</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body text-center">
+                <h4>@Model.UserGeneralViewModel.FirstName</h4>
+                <p>@Model.UserGeneralViewModel.Username</p>
+                <p>@Model.UserGeneralViewModel.Email</p>
+                <hr>
+                <p class="text-danger"><strong>*</strong> Bu kullanıcı için rol ataması yapıyorsunuz.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript Kodu -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("submitRoles").addEventListener("click", function () {
+            let userId = "@ViewBag.userId"; // Kullanıcı ID'yi al
+            let selectedRoles = [];
+
+            // Seçili rolleri al
+            document.querySelectorAll('.role-checkbox').forEach(checkbox => {
+                selectedRoles.push({
+                    RoleId: checkbox.getAttribute("data-roleid"),
+                    RoleName: checkbox.getAttribute("data-rolename"),
+                    IsExist: checkbox.checked
+                });
+            });
+
+            // CSRF Token'ı al
+            let token = document.querySelector('input[name="__RequestVerificationToken"]').value;
+
+            // Fetch API ile POST isteği yap
+            fetch('@Url.Action("AssignRoleToUser", "Role", new { area = "Admin" })' + '?userId=' + encodeURIComponent(userId), {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'RequestVerificationToken': token
+                },
+                body: JSON.stringify(selectedRoles)
+            })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url; // Başarılı olursa yönlendir
+                } else {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                if (data && !data.success) {
+                    alert("Hata oluştu: " + data.message);
+                }
+            })
+            .catch(error => console.error("Hata:", error));
+        });
+    });
+</script>

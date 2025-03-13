@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\shared\\_productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\shared\\_productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\areas\\admin\\views\\role\\createrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\areas\\admin\\views\\role\\createrole.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\helpers\\cart\\sessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\helpers\\cart\\sessionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\areas\\admin\\views\\home\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\areas\\admin\\views\\home\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\areas\\admin\\views\\role\\assignroletouser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\areas\\admin\\views\\role\\assignroletouser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +38,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_ProductList.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Shared\\_ProductList.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Shared\\_ProductList.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Shared\\_ProductList.cshtml",
-              "RelativeToolTip": "UI\\Views\\Shared\\_ProductList.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "UI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "UI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEwAAAACAQAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-11T12:48:49.69Z",
+              "WhenOpened": "2025-03-13T17:30:11.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SessionHelper.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Helpers\\Cart\\SessionHelper.cs",
-              "RelativeDocumentMoniker": "UI\\Helpers\\Cart\\SessionHelper.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Helpers\\Cart\\SessionHelper.cs",
-              "RelativeToolTip": "UI\\Helpers\\Cart\\SessionHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "UI\\Areas\\Admin\\Controllers\\RoleController.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "UI\\Areas\\Admin\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T12:34:51.63Z",
+              "WhenOpened": "2025-03-13T17:19:04.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "UI\\Controllers\\CartController.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\CartController.cs",
-              "RelativeToolTip": "UI\\Controllers\\CartController.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAswGMAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T12:33:17.07Z",
+              "Title": "CreateRole.cshtml",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Role\\CreateRole.cshtml",
+              "RelativeDocumentMoniker": "UI\\Areas\\Admin\\Views\\Role\\CreateRole.cshtml",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Role\\CreateRole.cshtml",
+              "RelativeToolTip": "UI\\Areas\\Admin\\Views\\Role\\CreateRole.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T17:17:53.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AssignRoleToUser.cshtml",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Role\\AssignRoleToUser.cshtml",
+              "RelativeDocumentMoniker": "UI\\Areas\\Admin\\Views\\Role\\AssignRoleToUser.cshtml",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Role\\AssignRoleToUser.cshtml",
+              "RelativeToolTip": "UI\\Areas\\Admin\\Views\\Role\\AssignRoleToUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T17:17:47.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserList.cshtml",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Home\\UserList.cshtml",
+              "RelativeDocumentMoniker": "UI\\Areas\\Admin\\Views\\Home\\UserList.cshtml",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Home\\UserList.cshtml",
+              "RelativeToolTip": "UI\\Areas\\Admin\\Views\\Home\\UserList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T17:17:42.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "UI\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "UI\\Areas\\Admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T17:17:41.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "UI\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "UI\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAPAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T17:13:55.405Z",
               "EditorCaption": ""
             }
           ]

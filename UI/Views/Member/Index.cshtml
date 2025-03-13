@@ -1,0 +1,24 @@
+﻿@model UserViewModel
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1>Kullanıcı Bilgileri</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Kullanıcı adı</th>
+                    <th>Email</th>
+                    <th>Ad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.UserName</td>
+                    <td>@Model.Email</td>
+                    <td>@Model.Name</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

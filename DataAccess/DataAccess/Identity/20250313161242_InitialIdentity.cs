@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DataAccess.Identity.Migrations
+namespace DataAccess.DataAccess.Identity
 {
     /// <inheritdoc />
     public partial class InitialIdentity : Migration

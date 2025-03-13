@@ -4,20 +4,14 @@ namespace UI.Models.Identity
 {
     public class SignUpViewModel
     {
-        public SignUpViewModel()
-        {
-            
-        }
+        [Required(ErrorMessage = "Ad boş geçilemez")]
+        [Display(Name = "Ad : ")]
+        public string FirstName { get; set; }
 
-        public SignUpViewModel(string userName,string email,string phone,string password)
-        {
-            UserName = userName;
-            Email = email;
-            Phone = phone;
-            Password = password;
-        }
+        [Required(ErrorMessage = "Soyad boş geçilemez")]
+        [Display(Name = "Soyad : ")]
+        public string LastName { get; set; }
 
-        
         [Required(ErrorMessage ="Kullanıcı adı boş geçilemez")]
         [Display(Name ="Kullanıcı adı : ")]
         public string UserName { get; set; }

@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DataAccess.Identity.Migrations
+namespace DataAccess.DataAccess.Identity
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20250307095246_InitialIdentity")]
+    [Migration("20250313161242_InitialIdentity")]
     partial class InitialIdentity
     {
         /// <inheritdoc />

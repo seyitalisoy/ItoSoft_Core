@@ -1,40 +1,42 @@
-﻿//using Business.Identity.Localizations;
-//using DataAccess.Identity;
-//using Entities.Concrete.Identity;
-//using Microsoft.AspNetCore.Identity;
-//using System;
+﻿
 
-//namespace UI.Extensions
-//{
-//    public static class StartupExtensions
-//    {
-//        public static void ConfigureIdentity(this IServiceCollection services)
-//        {
-//            services.Configure<DataProtectionTokenProviderOptions>(opt =>
-//            {
-//                opt.TokenLifespan = TimeSpan.FromHours(2);
-//            });
+using Business.Identity.Localizations;
+using Business.Identity.Validators;
+using DataAccess.Identity;
+using Entities.Concrete.Identity;
+using Microsoft.AspNetCore.Identity;
 
-//            services.AddIdentity<AppUser, AppRole>(options =>
-//            {
-//                options.User.RequireUniqueEmail = true;
-//                options.User.AllowedUserNameCharacters = "abcdefghijklmnoprstuvwxyz1234567890_";
+namespace UI.Extensions
+{
+    public static class StartupExtensions
+    {
+        public static void ConfigureIdentity(this IServiceCollection services)
+        {
+            services.Configure<DataProtectionTokenProviderOptions>(opt =>
+            {
+                opt.TokenLifespan = TimeSpan.FromHours(2);
+            });
 
-//                options.Password.RequiredLength = 6;
-//                options.Password.RequireNonAlphanumeric = false;
-//                options.Password.RequireLowercase = true;
-//                options.Password.RequireUppercase = false;
-//                options.Password.RequireDigit = false;
+            services.AddIdentity<AppUser, AppRole>(options =>
+            {
+                options.User.RequireUniqueEmail = true;
+                options.User.AllowedUserNameCharacters = "abcdefghijklmnoprstuvwxyz1234567890_";
 
-//                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
-//                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireDigit = false;
 
-//            }).AddUserValidator<UserValidator>()
-//                .AddPasswordValidator<PasswordValidator>()
-//                .AddErrorDescriber<LocalizationIdentityErrorDescriber>()
-//                .AddDefaultTokenProviders()
-//                .AddEntityFrameworkStores<IdentityContext>();
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
+                options.Lockout.MaxFailedAccessAttempts = 3;
 
-//        }
-//    }
-//}
+            }).AddUserValidator<UserValidator>()
+                .AddPasswordValidator<PasswordValidator>()
+                .AddErrorDescriber<LocalizationIdentityErrorDescriber>()
+                .AddDefaultTokenProviders()
+                .AddEntityFrameworkStores<IdentityContext>();
+
+        }
+    }
+}

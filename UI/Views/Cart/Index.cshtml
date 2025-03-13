@@ -20,8 +20,12 @@ else
 		{
 			<tr>
 				<td>@item.ProductName</td>
-				<td>@item.Price</td>
-				<td>@item.Quantity</td>
+				<td>
+					<span id="price-@item.ProductId">@item.Price</span> ₺
+				</td>
+				<td>
+					<span id="quantity-@item.ProductId">@item.Quantity</span>
+				</td>
 				@* <td>@(item.Price * item.Quantity)</td> *@
 				@*           <td>
                     <div class="quantity-control">
@@ -38,7 +42,8 @@ else
 						<!-- Miktarı azaltma butonu -->
 						<a href="javascript:void(0);" class="quantity-btn" data-product-id="@item.ProductId" data-action="decrease" id="decrease-btn-@item.ProductId"
 						@(item.Quantity == 1 ? "disabled='disabled'" : "")> - </a>
-						<h1 id="quantity-@item.ProductId">@item.Quantity</h1> <!-- Miktar burada gösterilecek -->
+						@* <h4>Miktar</h4> *@
+						<span id="quantity-@item.ProductId">@item.Quantity</span>
 						<!-- Miktarı artırma butonu -->
 						<a href="javascript:void(0);" class="quantity-btn" data-product-id="@item.ProductId" data-action="increase"> + </a>
 					</div>
@@ -53,7 +58,7 @@ else
 	</table>
 	<a href="@Context.Request.Headers["Referer"]" class="btn btn-secondary">Geri Dön</a>
 	<a asp-action="ClearCart" class="btn btn-warning">Sepeti Temizle</a>
-	<a asp-controller="Order" asp-action="Checkout" class="btn btn-success">Siparişi Tamamla</a>
+	<a asp-controller="Cart" asp-action="Checkout" class="btn btn-success">Siparişi Tamamla</a>
 }
 
 <style>
@@ -250,31 +255,27 @@ else
 <script>
 			$(document).ready(function () {
 		$(".quantity-btn").on("click", function () {
-			var action = $(this).data("action");  // 'increase' veya 'decrease'
-			var productId = $(this).data("product-id");  // Ürün ID'sini al
-			var quantityElement = $("#quantity-" + productId);  // Miktar gösterilen elemanı al
-			var decreaseBtn = $("#decrease-btn-" + productId);  // Azaltma butonunu al
+			var action = $(this).data("action");
+			var productId = $(this).data("product-id");
 
-			if (action === "decrease" && quantityElement.text() == 1) {
-				// Miktar 1 ise, azaltma işlemi yapılmasın
+			if (action === "decrease" && $("#quantity-" + productId).first().text().trim() == "1") {
 				alert("Miktar 1'den daha az olamaz.");
-				return;  // Eğer miktar 1 ise, işlemi durdur
+				return;
 			}
 
 			$.ajax({
-				url: "/Cart/" + (action === "increase" ? "IncreaseQuantity" : "DecreaseQuantity") + "?productId=" + productId, // İlgili action'a yönlendir
+				url: "/Cart/" + (action === "increase" ? "IncreaseQuantity" : "DecreaseQuantity") + "?productId=" + productId,
 				type: "GET",
 				success: function (response) {
 					if (response.success) {
-						// Yeni miktarı güncelle
-						quantityElement.text(response.newQuantity);
+						// Sayfadaki tüm ilgili quantity alanlarını güncelle
+						$("span[id='quantity-" + productId + "']").text(response.newQuantity);
 
-						// Eğer miktar 1'e düşerse, azaltma butonunu devre dışı bırak
-						if (response.newQuantity === 1) {
-							decreaseBtn.prop('disabled', true);  // Butonu devre dışı bırak
-						} else {
-							decreaseBtn.prop('disabled', false);  // Butonu aktif tut
-						}
+						// Fiyat güncelleme (varsa)
+						$("span[id='price-" + productId + "']").text(response.newPrice.toFixed(2) + " ₺");
+
+						// Azaltma butonunu kontrol et
+						$("#decrease-btn-" + productId).prop("disabled", response.newQuantity === 1);
 					} else {
 						alert(response.message || "Bir hata oluştu. Lütfen tekrar deneyin.");
 					}
@@ -285,6 +286,7 @@ else
 			});
 		});
 	});
+
 
 
 </script>

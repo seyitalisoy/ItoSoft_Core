@@ -1,6 +1,9 @@
 ﻿using Business.Abstract;
+using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using UI.Helpers.Cart;
+using UI.Models;
+
 
 //using UI.Helpers.Cart;
 using UI.Models.Cart;
@@ -19,7 +22,7 @@ namespace UI.Controllers
         }
         public IActionResult Index()
         {
-            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session,"Cart") ?? new List<CartItem>();
+            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session, "Cart") ?? new List<CartItem>();
             return View(cart);
         }
 
@@ -29,7 +32,7 @@ namespace UI.Controllers
             var product = _productService.GetById(productId).Data;
             if (product == null) return NotFound();
 
-            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session,"Cart") ?? new List<CartItem>();
+            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session, "Cart") ?? new List<CartItem>();
 
             var cartItem = cart.FirstOrDefault(c => c.ProductId == productId);
             if (cartItem != null)
@@ -42,12 +45,13 @@ namespace UI.Controllers
                 {
                     ProductId = product.ProductId,
                     ProductName = product.ProductName,
+                    UnitPrice = product.Price,
                     Price = product.Price,
                     Quantity = 1
                 });
             }
 
-            SessionHelper.Set(HttpContext.Session,"Cart", cart);
+            SessionHelper.Set(HttpContext.Session, "Cart", cart);
             return RedirectToAction("Index");
         }
 
@@ -58,7 +62,7 @@ namespace UI.Controllers
             if (cart != null)
             {
                 cart.RemoveAll(c => c.ProductId == productId);
-                SessionHelper.Set(HttpContext.Session,"Cart", cart);
+                SessionHelper.Set(HttpContext.Session, "Cart", cart);
             }
             return RedirectToAction("Index");
         }
@@ -73,23 +77,25 @@ namespace UI.Controllers
         [HttpGet]
         public JsonResult IncreaseQuantity(int productId)
         {
-            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session,"Cart") ?? new List<CartItem>(); // Eğer null ise boş bir liste başlat
+            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session, "Cart") ?? new List<CartItem>();
             var cartItem = cart.FirstOrDefault(c => c.ProductId == productId);
 
             if (cartItem != null)
             {
                 cartItem.Quantity++;
-                SessionHelper.Set(HttpContext.Session,"Cart", cart);
-                return Json(new { success = true, newQuantity = cartItem.Quantity });
+                cartItem.Price = cartItem.UnitPrice * cartItem.Quantity; // Doğru hesaplama
+                SessionHelper.Set(HttpContext.Session, "Cart", cart);
+
+                return Json(new { success = true, newQuantity = cartItem.Quantity, newPrice = cartItem.Price });
             }
 
             return Json(new { success = false });
         }
 
         [HttpGet]
-        public IActionResult DecreaseQuantity(int productId)
+        public JsonResult DecreaseQuantity(int productId)
         {
-            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session,"Cart");
+            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session, "Cart");
 
             if (cart != null)
             {
@@ -97,8 +103,10 @@ namespace UI.Controllers
                 if (cartItem != null && cartItem.Quantity > 1)
                 {
                     cartItem.Quantity--;
-                    SessionHelper.Set(HttpContext.Session,"Cart", cart);
-                    return Json(new { success = true, newQuantity = cartItem.Quantity });
+                    cartItem.Price = cartItem.UnitPrice * cartItem.Quantity; // Doğru hesaplama
+                    SessionHelper.Set(HttpContext.Session, "Cart", cart);
+
+                    return Json(new { success = true, newQuantity = cartItem.Quantity, newPrice = cartItem.Price });
                 }
                 else
                 {
@@ -111,80 +119,61 @@ namespace UI.Controllers
 
 
 
+        public ActionResult Checkout()
+        {
+            return View(new CheckoutViewModel());
+        }
 
-        //[HttpGet]
-        //public IActionResult DecreaseQuantity(int productId)
-        //{
-        //    // Sepeti session'dan al
-        //    var cart = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Cart");
+        // Sipariş tamamlanacak
+        [HttpPost]
+        public ActionResult CompleteOrder(CheckoutViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
-        //    if (cart != null)
-        //    {
-        //        // Sepetteki ürünü bul
-        //        var cartItem = cart.FirstOrDefault(c => c.ProductId == productId);
+            var cart = SessionHelper.Get<List<CartItem>>(HttpContext.Session, "Cart");
+            if (cart.Count == 0)
+            {
+                return RedirectToAction("Index");
+            }
 
-        //        if (cartItem != null)
-        //        {
-        //            // Miktarı azalt
-        //            if (cartItem.Quantity > 1)
-        //            {
-        //                cartItem.Quantity--;
-        //            }
-        //            else
-        //            {
-        //                // Miktar 1 ise ürünü sepetten çıkar
-        //                cart.RemoveAll(c => c.ProductId == productId);
-        //            }
-        //        }
+            string userName= "User1";
+            int orderNumber = Math.Abs(Guid.NewGuid().GetHashCode());
 
-        //        // Güncellenmiş sepeti session'a kaydet
-        //        HttpContext.Session.SetObjectAsJson("Cart", cart);
-        //    }
 
-        //    // Sepet sayfasına yönlendir
-        //    return RedirectToAction("Index");
-        //}
+            foreach (var item in cart)
+            {
+                var product = _productService.GetById(item.ProductId).Data;
+                product.UnitsInStock -= item.Quantity;
+                _productService.Update(product);
 
-        //[HttpGet]
-        //public IActionResult IncreaseQuantity(int productId)
-        //{
-        //    // Sepeti session'dan al
-        //    var cart = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Cart");
+                var order = new Order
+                {
+                    OrderId = orderNumber,
+                    ProductId = item.ProductId,
+                    ProductAmount = item.Quantity,
+                    Price = item.Price,
+                    AdressTitle = model.AddressTitle,
+                    Adress = model.Address,
+                    OrderDate = DateTime.Now,
+                    UserName = userName
+                };
 
-        //    if (cart != null)
-        //    {
-        //        // Sepetteki ürünü bul
-        //        var cartItem = cart.FirstOrDefault(c => c.ProductId == productId);
+                _orderService.Add(order);
+            }
 
-        //        if (cartItem != null)
-        //        {
-        //            // Miktarı arttır
-        //            cartItem.Quantity++;
-        //        }
-        //        else
-        //        {
-        //            // Eğer ürün sepette yoksa yeni bir ürün ekle
-        //            var product = _productService.GetById(productId).Data;
-        //            if (product != null)
-        //            {
-        //                cart.Add(new CartItem
-        //                {
-        //                    ProductId = product.ProductId,
-        //                    ProductName = product.ProductName,
-        //                    Price = product.Price,
-        //                    Quantity = 1
-        //                });
-        //            }
-        //        }
+            SessionHelper.Remove(HttpContext.Session,"Cart");
 
-        //        // Güncellenmiş sepeti session'a kaydet
-        //        HttpContext.Session.SetObjectAsJson("Cart", cart);
-        //    }
+            return RedirectToAction("OrderCompleted");
 
-        //    // Sepet sayfasına yönlendir
-        //    return RedirectToAction("Index");
-        //}
+        }
 
+        public ActionResult OrderCompleted()
+        {
+            return View();
+        }
 
 
     }
