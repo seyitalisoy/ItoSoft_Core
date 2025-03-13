@@ -9,6 +9,7 @@ using UI.Models.Identity;
 
 namespace UI.Controllers
 {
+    //[Authorize]
     public class HomeController : Controller
     {
 
@@ -19,8 +20,7 @@ namespace UI.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-
-        [Authorize]
+        
         public IActionResult Index()
         {
             return View();

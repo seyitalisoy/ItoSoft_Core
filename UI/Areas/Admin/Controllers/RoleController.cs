@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using UI.Extensions;
 namespace UI.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -32,7 +34,7 @@ namespace UI.Areas.Admin.Controllers
 
         public IActionResult CreateRole()
         {
-            return View(new CreateRoleViewModel());
+            return View();
         }
 
 
@@ -130,11 +132,12 @@ namespace UI.Areas.Admin.Controllers
             var roleViewModelList = new List<AssignRoleToUserViewModel>();
 
 
+
             var userGeneralVM = new UserGeneralViewModel
             {
                 Email = user.Email,
-                FirstName = user.FirstName,
-                Username = user.UserName,
+                FullName = user.FirstName+" "+user.LastName,
+                Username = user.UserName
             };
 
 
@@ -165,65 +168,25 @@ namespace UI.Areas.Admin.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> AssignRoleToUser(string userId, [FromBody] List<AssignRoleToUserViewModel> requestList)
+        public async Task<IActionResult> AssignRoleToUser(string userId, UserRoleInfoViewModel requestList)
         {
-            if (string.IsNullOrEmpty(userId))
-            {
-                return Json(new { success = false, message = "Kullanıcı ID alınamadı!" });
-            }
+            var user = (await _userManager.FindByIdAsync(userId))!;
 
-            if (requestList == null || !requestList.Any())
+            foreach (var role in requestList.AssignRoleToUserViewModel)
             {
-                return Json(new { success = false, message = "Gönderilen roller eksik veya boş!" });
-            }
-
-            var user = await _userManager.FindByIdAsync(userId);
-            if (user == null)
-            {
-                return Json(new { success = false, message = "Kullanıcı bulunamadı!" });
-            }
-
-            foreach (var role in requestList)
-            {
-                try
+                if (role.IsExist)
                 {
-                    if (role.IsExist) // Eğer rol atanacaksa
-                    {
-                        var result = await _userManager.AddToRoleAsync(user, role.RoleName);
-                        if (!result.Succeeded)
-                        {
-                            Console.WriteLine($"Rol ekleme başarısız: {string.Join(", ", result.Errors.Select(e => e.Description))}");
-                            return Json(new { success = false, message = "Rol ekleme başarısız: " + string.Join(", ", result.Errors.Select(e => e.Description)) });
-                        }
-                    }
-                    else // Eğer rol kaldırılacaksa
-                    {
-                        // Kullanıcı gerçekten bu rolde mi?
-                        if (await _userManager.IsInRoleAsync(user, role.RoleName))
-                        {
-                            var result = await _userManager.RemoveFromRoleAsync(user, role.RoleName);
-                            if (!result.Succeeded)
-                            {
-                                Console.WriteLine($"Rol kaldırma başarısız: {string.Join(", ", result.Errors.Select(e => e.Description))}");
-                                return Json(new { success = false, message = "Rol kaldırma başarısız: " + string.Join(", ", result.Errors.Select(e => e.Description)) });
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Kullanıcı zaten {role.RoleName} rolünde değil, işlem yapılmadı.");
-                        }
-                    }
+                    await _userManager.AddToRoleAsync(user, role.RoleName);
                 }
-                catch (Exception ex)
+                else
                 {
-                    Console.WriteLine("Hata oluştu: " + ex.Message);
-                    return Json(new { success = false, message = "Rol atama sırasında hata oluştu: " + ex.Message });
+                    await _userManager.RemoveFromRoleAsync(user, role.RoleName);
                 }
             }
 
+            TempData["RoleAssigned"] = true;
 
-
-            return Json(new { success = true, message = "Roller başarıyla atandı!" });
+            return RedirectToAction(nameof(HomeController.UserList), "Home");
         }
 
         //[HttpGet]

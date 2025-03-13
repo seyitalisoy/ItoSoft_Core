@@ -1,3 +1,5 @@
+wwwroot\css\custom_css\error\access_denied.css
+wwwroot\css\custom_css\error\page_not_found.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js

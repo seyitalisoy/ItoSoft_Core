@@ -309,3 +309,4 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\refint\UI.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.genruntimeconfig.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\ref\UI.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css

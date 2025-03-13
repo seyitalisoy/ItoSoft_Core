@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QI8wlxT6bmuC50cbWDKUN5M2h6/gVQVtGggohlcdo3E=",
+  "Hash": "e0wcLQqGLsbbEmrjpH+YBBp6vQW5aqiA9hL96oCOu6E=",
   "Source": "UI",
   "BasePath": "_content/UI",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "cxa9gsyh20",
-      "Integrity": "kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=",
+      "Fingerprint": "q5e37319hz",
+      "Integrity": "kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\UI.styles.css"
@@ -52,11 +52,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "cxa9gsyh20",
-      "Integrity": "kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=",
+      "Fingerprint": "q5e37319hz",
+      "Integrity": "kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UI.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\error\\access_denied.css",
+      "SourceId": "UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\",
+      "BasePath": "_content/UI",
+      "RelativePath": "css/custom_css/error/access_denied#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m17jcykfgx",
+      "Integrity": "lgGufd+CAtrYLhstJ3EbKk2+7RPMk0NfCbh58Y7YNNU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\custom_css\\error\\access_denied.css"
+    },
+    {
+      "Identity": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\error\\page_not_found.css",
+      "SourceId": "UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\",
+      "BasePath": "_content/UI",
+      "RelativePath": "css/custom_css/error/page_not_found#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5gk91s7mh0",
+      "Integrity": "O6+Bttb3NvOOYPx8BSPBnUh6++D/JtxXLo1tSgsmKuc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\custom_css\\error\\page_not_found.css"
     },
     {
       "Identity": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\site.css",
@@ -1320,6 +1362,170 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/custom_css/error/access_denied.css",
+      "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\error\\access_denied.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "152"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lgGufd+CAtrYLhstJ3EbKk2+7RPMk0NfCbh58Y7YNNU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 19:04:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lgGufd+CAtrYLhstJ3EbKk2+7RPMk0NfCbh58Y7YNNU="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom_css/error/access_denied.m17jcykfgx.css",
+      "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\error\\access_denied.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "152"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lgGufd+CAtrYLhstJ3EbKk2+7RPMk0NfCbh58Y7YNNU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 19:04:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m17jcykfgx"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom_css/error/access_denied.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lgGufd+CAtrYLhstJ3EbKk2+7RPMk0NfCbh58Y7YNNU="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom_css/error/page_not_found.5gk91s7mh0.css",
+      "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\error\\page_not_found.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6+Bttb3NvOOYPx8BSPBnUh6++D/JtxXLo1tSgsmKuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 19:04:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5gk91s7mh0"
+        },
+        {
+          "Name": "label",
+          "Value": "css/custom_css/error/page_not_found.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6+Bttb3NvOOYPx8BSPBnUh6++D/JtxXLo1tSgsmKuc="
+        }
+      ]
+    },
+    {
+      "Route": "css/custom_css/error/page_not_found.css",
+      "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\error\\page_not_found.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6+Bttb3NvOOYPx8BSPBnUh6++D/JtxXLo1tSgsmKuc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 13 Mar 2025 19:04:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6+Bttb3NvOOYPx8BSPBnUh6++D/JtxXLo1tSgsmKuc="
+        }
+      ]
+    },
     {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\site.css",
@@ -6251,7 +6457,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1120"
+          "Value": "2252"
         },
         {
           "Name": "Content-Type",
@@ -6259,11 +6465,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=\""
+          "Value": "\"kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 16:37:36 GMT"
+          "Value": "Thu, 13 Mar 2025 18:14:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6273,12 +6479,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA="
+          "Value": "sha256-kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k="
         }
       ]
     },
     {
-      "Route": "UI.cxa9gsyh20.bundle.scp.css",
+      "Route": "UI.q5e37319hz.bundle.scp.css",
       "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UI.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6288,7 +6494,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1120"
+          "Value": "2252"
         },
         {
           "Name": "Content-Type",
@@ -6296,11 +6502,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=\""
+          "Value": "\"kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 16:37:36 GMT"
+          "Value": "Thu, 13 Mar 2025 18:14:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6310,7 +6516,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "cxa9gsyh20"
+          "Value": "q5e37319hz"
         },
         {
           "Name": "label",
@@ -6318,12 +6524,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA="
+          "Value": "sha256-kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k="
         }
       ]
     },
     {
-      "Route": "UI.cxa9gsyh20.styles.css",
+      "Route": "UI.q5e37319hz.styles.css",
       "AssetFile": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\UI.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6333,7 +6539,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1120"
+          "Value": "2252"
         },
         {
           "Name": "Content-Type",
@@ -6341,11 +6547,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=\""
+          "Value": "\"kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 16:37:36 GMT"
+          "Value": "Thu, 13 Mar 2025 18:14:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6355,7 +6561,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "cxa9gsyh20"
+          "Value": "q5e37319hz"
         },
         {
           "Name": "label",
@@ -6363,7 +6569,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA="
+          "Value": "sha256-kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k="
         }
       ]
     },
@@ -6378,7 +6584,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1120"
+          "Value": "2252"
         },
         {
           "Name": "Content-Type",
@@ -6386,11 +6592,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA=\""
+          "Value": "\"kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 13 Mar 2025 16:37:36 GMT"
+          "Value": "Thu, 13 Mar 2025 18:14:59 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6400,7 +6606,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-kP/+RoYk6eZsGrIBuVkiUoLm2RP7m+CvgUn0fdSxENA="
+          "Value": "sha256-kvLdcBO/jpKOtDU3RGxGGk6wwpyecgAI4qX7p97569k="
         }
       ]
     }

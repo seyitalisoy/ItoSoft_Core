@@ -3,6 +3,7 @@ using Business.Abstract;
 using Business.ValidationRules;
 using Entities.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,6 +12,7 @@ using UI.Models.Entities;
 
 namespace UI.Controllers
 {
+    
     public class ProductController : Controller
     {
         IProductService _productService;

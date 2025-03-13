@@ -6,6 +6,7 @@ using Entities.Concrete.Identity;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System.Reflection;
 using UI.Extensions;
 
@@ -46,6 +47,7 @@ builder.Services.ConfigureApplicationCookie(opt =>
     cookieBuilder.Name = "MyFirstCookie";
     opt.LoginPath = new PathString("/Home/SignIn");
     opt.LogoutPath = new PathString("/Member/Logout");
+    opt.AccessDeniedPath = new PathString("/Error/AccessDenied");
     opt.Cookie = cookieBuilder;
     opt.ExpireTimeSpan = TimeSpan.FromDays(50);
     opt.SlidingExpiration = true;
@@ -70,6 +72,9 @@ app.UseRouting();
 
 app.UseAuthentication(); // Kimlik doðrulama eklendi
 app.UseAuthorization();
+
+app.UseStatusCodePagesWithReExecute("/Error/PageNotFound");
+
 
 app.MapControllerRoute(
     name: "areas",

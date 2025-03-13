@@ -6,7 +6,7 @@ using UI.Areas.Admin.Models.Identity;
 
 namespace UI.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class MemberController : Controller
     {
         private readonly SignInManager<AppUser> _signInManager;

@@ -2,7 +2,15 @@
   "Files": [
     {
       "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\UI.bundle.scp.css",
-      "PackagePath": "staticwebassets\\UI.cxa9gsyh20.bundle.scp.css"
+      "PackagePath": "staticwebassets\\UI.q5e37319hz.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\error\\access_denied.css",
+      "PackagePath": "staticwebassets\\css\\custom_css\\error\\access_denied.css"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\error\\page_not_found.css",
+      "PackagePath": "staticwebassets\\css\\custom_css\\error\\page_not_found.css"
     },
     {
       "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\site.css",
