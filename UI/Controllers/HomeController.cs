@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using UI.Extensions;
+using UI.Helpers.Cart;
+using UI.Helpers.Redis;
 using UI.Models;
+using UI.Models.Cart;
 using UI.Models.Identity;
 
 namespace UI.Controllers
@@ -15,12 +18,14 @@ namespace UI.Controllers
 
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        public HomeController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        private readonly RedisHelper _redisHelper;
+        public HomeController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RedisHelper redisHelper)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _redisHelper = redisHelper;
         }
-        
+
         public IActionResult Index()
         {
             return View();
@@ -47,6 +52,8 @@ namespace UI.Controllers
                 UserName = request.UserName,
                 Email = request.Email,
                 PhoneNumber = request.Phone,
+                Adress1 = request.Adress1,
+                AdressTitle1 = request.AdressTitle1
             };
 
             var identityResult = await _userManager.CreateAsync(user, request.PasswordConfirm);
@@ -71,10 +78,11 @@ namespace UI.Controllers
             return View();
         }
 
+
+        //Redis Cart Transfer
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInViewModel request, string? returnUrl = null)
         {
-
             returnUrl = returnUrl ?? Url.Action("Index", "Home");
 
             var userResult = await _userManager.FindByEmailAsync(request.Email);
@@ -89,6 +97,9 @@ namespace UI.Controllers
 
             if (signInResult.Succeeded)
             {
+                // Login olduktan sonra cart bilgisinin Redis'e aktarýlmasý
+                await SyncCartToRedis(userResult);
+
                 return Redirect(returnUrl);
             }
 
@@ -101,6 +112,42 @@ namespace UI.Controllers
             ModelState.AddModelErrorList(new List<string>() { "Email veya þifre yanlýþ" });
 
             return View();
+        }
+
+        private async Task SyncCartToRedis(AppUser user)
+        {
+            // Kullanýcý login olduðunda Session'dan cart bilgisini alýyoruz
+            var userId = user.Id;
+            var sessionCart = SessionHelper.Get<List<CartItem>>(HttpContext.Session, "Cart");
+
+            if (sessionCart != null && sessionCart.Count > 0)
+            {
+                // Redis'teki mevcut cart verisini al
+                var redisCart = _redisHelper.GetCart(userId) ?? new List<CartItem>();
+
+                // Session'dan gelen ürünleri Redis'e aktar
+                foreach (var item in sessionCart)
+                {
+                    var redisItem = redisCart.FirstOrDefault(c => c.ProductId == item.ProductId);
+
+                    if (redisItem != null)
+                    {
+                        // Eðer Redis'te bu ürün zaten varsa miktarýný artýr
+                        redisItem.Quantity += item.Quantity;
+                    }
+                    else
+                    {
+                        // Eðer Redis'te yoksa, yeni ürün ekle
+                        redisCart.Add(item);
+                    }
+                }
+
+                // Güncellenmiþ cart verisini Redis'e kaydet
+                _redisHelper.SetCart(userId, redisCart);
+
+                // Session'dan cart bilgisini sil
+                HttpContext.Session.Remove("Cart");
+            }
         }
     }
 }

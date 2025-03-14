@@ -12,6 +12,14 @@ namespace UI.Models.Identity
         [Display(Name = "Soyad : ")]
         public string LastName { get; set; }
 
+        [Required(ErrorMessage = "Adres Başlığı boş geçileme<")]
+        [Display(Name = "Adres Başlığı : ")]
+        public string AdressTitle1{ get; set; }
+
+        [Required(ErrorMessage = "Adres boş geçilemez")]
+        [Display(Name = "Adres : ")]
+        public string Adress1{ get; set; }
+
         [Required(ErrorMessage ="Kullanıcı adı boş geçilemez")]
         [Display(Name ="Kullanıcı adı : ")]
         public string UserName { get; set; }

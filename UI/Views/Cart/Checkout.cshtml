@@ -11,6 +11,42 @@
         <form asp-controller="Cart" asp-action="CompleteOrder" method="post">
 
             <div class="row mb-3">
+                <label for="Email" class="col-md-4 col-form-label" asp-for="Email"></label>
+                <div class="col-md-8">
+
+                    <input asp-for="Email" class="form-control">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="FirstName" class="col-md-4 col-form-label" asp-for="FirstName"></label>
+                <div class="col-md-8">
+
+                    <input asp-for="FirstName" class="form-control">
+                    <span class="text-danger" asp-validation-for="FirstName"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="LastName" class="col-md-4 col-form-label" asp-for="LastName"></label>
+                <div class="col-md-8">
+
+                    <input asp-for="LastName" class="form-control">
+                    <span class="text-danger" asp-validation-for="LastName"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Phone" class="col-md-4 col-form-label" asp-for="Phone"></label>
+                <div class="col-md-8">
+
+                    <input asp-for="Phone" class="form-control">
+                    <span class="text-danger" asp-validation-for="Phone"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
                 <label for="AddressTitle" class="col-md-4 col-form-label" asp-for="AddressTitle"></label>
                 <div class="col-md-8">
 
@@ -27,6 +63,7 @@
                 </div>
             </div>            
 
+                     
             <div class="row mb-3">
 
                 <div class="col-md-8 offset-md-4">
@@ -34,7 +71,7 @@
                 </div>
             </div>
 
-            <a href="@Context.Request.Headers["Referer"]" class="btn btn-secondary">Geri Dön</a>
+            <a href="/Cart/Index" class="btn btn-secondary">Sepete Dön</a>
         </form>
     </div>
 </div>

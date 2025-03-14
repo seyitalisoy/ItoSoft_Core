@@ -1,88 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\error\\pagenotfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\error\\pagenotfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\error\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\error\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PageNotFound.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Error\\PageNotFound.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Error\\PageNotFound.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Error\\PageNotFound.cshtml",
-              "RelativeToolTip": "UI\\Views\\Error\\PageNotFound.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-13T19:12:35.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccessDenied.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Error\\AccessDenied.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Error\\AccessDenied.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Error\\AccessDenied.cshtml",
-              "RelativeToolTip": "UI\\Views\\Error\\AccessDenied.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-13T19:10:49.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ErrorController.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\ErrorController.cs",
-              "RelativeDocumentMoniker": "UI\\Controllers\\ErrorController.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\ErrorController.cs",
-              "RelativeToolTip": "UI\\Controllers\\ErrorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T19:10:31.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Program.cs",
-              "RelativeDocumentMoniker": "UI\\Program.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Program.cs",
-              "RelativeToolTip": "UI\\Program.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAwwFcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T19:06:38.77Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

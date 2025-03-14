@@ -21,30 +21,17 @@ else
 			<tr>
 				<td>@item.ProductName</td>
 				<td>
-					<span id="price-@item.ProductId">@item.Price</span> ₺
+					<span id="price-@item.ProductId">@(item.Price) ₺</span>
 				</td>
 				<td>
 					<span id="quantity-@item.ProductId">@item.Quantity</span>
 				</td>
-				@* <td>@(item.Price * item.Quantity)</td> *@
-				@*           <td>
-                    <div class="quantity-control">
-                        <!-- Miktarı azaltma butonu -->
-                        <a href="@Url.Action("DecreaseQuantity", "Cart", new { productId = item.ProductId })" class="quantity-btn">-</a>
-                        <h1>@item.Quantity</h1>
-                        <!-- Miktarı artırma butonu -->
-                        <a href="@Url.Action("IncreaseQuantity", "Cart", new { productId = item.ProductId })" class="quantity-btn">+</a>
-                    </div>
-                </td> *@
 
 				<td>
 					<div class="quantity-control">
-						<!-- Miktarı azaltma butonu -->
 						<a href="javascript:void(0);" class="quantity-btn" data-product-id="@item.ProductId" data-action="decrease" id="decrease-btn-@item.ProductId"
 						@(item.Quantity == 1 ? "disabled='disabled'" : "")> - </a>
-						@* <h4>Miktar</h4> *@
 						<span id="quantity-@item.ProductId">@item.Quantity</span>
-						<!-- Miktarı artırma butonu -->
 						<a href="javascript:void(0);" class="quantity-btn" data-product-id="@item.ProductId" data-action="increase"> + </a>
 					</div>
 				</td>
@@ -58,8 +45,37 @@ else
 	</table>
 	<a href="@Context.Request.Headers["Referer"]" class="btn btn-secondary">Geri Dön</a>
 	<a asp-action="ClearCart" class="btn btn-warning">Sepeti Temizle</a>
-	<a asp-controller="Cart" asp-action="Checkout" class="btn btn-success">Siparişi Tamamla</a>
+
+	@if (User.Identity.IsAuthenticated)
+	{
+		<a asp-controller="Cart" asp-action="CheckoutUser" class="btn btn-success">Siparişi Tamamla</a>
+	}
+	else
+	{
+		<a href="javascript:void(0);" class="btn btn-primary" id="complete-order-btn">Siparişi Tamamla</a>
+	}
 }
+
+<!-- Modal for Confirmation -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="confirmationModalLabel">Devam Etmek İçin Seçim Yapın</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				Hesabınızla giriş yaparak devam edin veya hesap olmadan devam edin.
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" id="login-option">Hesabınızla Giriş Yap</button>
+				<button type="button" class="btn btn-primary" id="continue-without-account">Hesap Olmadan Devam Et</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 <style>
 	.remove-item {
@@ -248,8 +264,11 @@ else
 		}
 </style>
 
-<!-- jQuery CDN Bağlantısını Ekleyin -->
+<!-- jQuery CDN Bağlantısı -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap gizli kısım -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- JavaScript Kodunu Sayfanın Sonunda veya $(document).ready() içinde ekleyin -->
 <script>
@@ -285,38 +304,36 @@ else
 				}
 			});
 		});
+
+		// Siparişi Tamamla butonuna tıklandığında
+		$("#complete-order-btn").on("click", function () {
+			var userId = '@User.Identity.IsAuthenticated'; // Kullanıcı login mi, kontrol et
+
+			if (userId === "False") {
+				// Kullanıcı login değilse, modal'ı göster
+				$('#confirmationModal').modal('show');
+			}
+		});
+
+		// Hesapla giriş yap butonuna tıklandığında
+		$("#login-option").on("click", function () {
+			var returnUrl = '/Cart/CheckoutUser'; // CheckoutUser metoduna yönlendirecek URL
+			window.location.href = '/Home/SignIn?returnUrl=' + encodeURIComponent(returnUrl); // Login sayfasına yönlendir
+		});
+
+		// Hesap olmadan devam et butonuna tıklandığında
+		$("#continue-without-account").on("click", function () {
+			window.location.href = '/Cart/Checkout'; // Checkout sayfasına yönlendir
+		});
 	});
-
-
-
 </script>
 
 
-@* <script>
-    $(document).ready(function () {
-        $(".quantity-btn").on("click", function () {
-            var action = $(this).data("action");  // 'increase' veya 'decrease'
-            var productId = $(this).data("product-id");  // Ürün ID'sini al
-            var quantityElement = $("#quantity-" + productId);  // Miktar gösterilen elemanı al
 
-            $.ajax({
-                url: "/Cart/" + (action === "increase" ? "IncreaseQuantity" : "DecreaseQuantity") + "?productId=" + productId, // İlgili action'a yönlendir
-                type: "GET",
-                success: function (response) {
-                    // Başarılı yanıt alındığında
-                    if (response.success) {
-                        // Yeni miktarı güncelle
-                        quantityElement.text(response.newQuantity);
-                    } else {
-                        alert("Bir hata oluştu. Lütfen tekrar deneyin.");
-                    }
-                },
-                error: function () {
-                    alert("Bir hata oluştu. Lütfen tekrar deneyin.");
-                }
-            });
-        });
-    });
-</script>
 
- *@
+
+
+
+
+
+

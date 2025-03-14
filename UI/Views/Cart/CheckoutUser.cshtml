@@ -1,0 +1,25 @@
+﻿@model CheckOutUserViewModel
+
+<h2>Adres Seçimi</h2>
+
+@if (Model.AddressList.Any())
+{
+    <form method="post" asp-action="CompleteOrderUser" asp-controller="Cart">
+        <div class="form-group">
+            <label for="adress">Adres Seçiniz</label>
+            <select id="adress" asp-for="SelectedAddress" class="form-control">
+                @foreach (var item in Model.AddressList)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">Devam Et</button>
+    </form>
+}
+else
+{
+    <p>Adres bilgileriniz bulunmamaktadır. Lütfen adres ekleyin.</p>
+    <a href="@Url.Action("AddAddress", "Account")" class="btn btn-primary">Profil Sayfası</a>
+}

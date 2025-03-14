@@ -19,6 +19,7 @@ namespace UI.Areas.Admin.Controllers
     {
 
         private readonly UserManager<AppUser> _userManager;
+
         public HomeController(UserManager<AppUser> userManager)
         {
             _userManager = userManager;

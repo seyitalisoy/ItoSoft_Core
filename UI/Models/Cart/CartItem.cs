@@ -4,8 +4,8 @@
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
-        public decimal UnitPrice { get; set; } // Ürünün değişmeyen birim fiyatı
-        public decimal Price { get; set; } // Toplam fiyat (UnitPrice * Quantity)
+        public decimal UnitPrice { get; set; } 
+        public decimal Price { get; set; } 
         public int Quantity { get; set; }
     }
 

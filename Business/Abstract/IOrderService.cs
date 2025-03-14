@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Utilities.Results;
 using Entities.Concrete;
+using Entities.Dtos;
 
 namespace Business.Abstract
 {
@@ -16,5 +17,6 @@ namespace Business.Abstract
         IResult Add(Order entity);
         IResult Delete(Order entity);
         IResult Update(Order entity);
+        IDataResult<List<OrderListDto>> GetOrderDetails();
     }
 }

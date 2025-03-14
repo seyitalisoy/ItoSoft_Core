@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DataAccess.DataAccess.Identity
+namespace DataAccess.Identity.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20250313161242_InitialIdentity")]
-    partial class InitialIdentity
+    [Migration("20250314202657_mig_1")]
+    partial class mig_1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -60,6 +60,18 @@ namespace DataAccess.DataAccess.Identity
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Adress1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Adress2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AdressTitle1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AdressTitle2")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -99,9 +111,6 @@ namespace DataAccess.DataAccess.Identity
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Picture")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");

@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\error\\pagenotfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\error\\pagenotfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\business\\concrete\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|solutionrelative:business\\concrete\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\errorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\error\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\error\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9D44AB62-422E-4200-9F1E-37C827FF2973}|DataAccess\\DataAccess.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\dataaccess\\concrete\\eforderdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D44AB62-422E-4200-9F1E-37C827FF2973}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\concrete\\eforderdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +43,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PageNotFound.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Error\\PageNotFound.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Error\\PageNotFound.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Error\\PageNotFound.cshtml",
-              "RelativeToolTip": "UI\\Views\\Error\\PageNotFound.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-13T19:12:35.242Z",
+              "Title": "OrderManager.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Concrete\\OrderManager.cs",
+              "RelativeDocumentMoniker": "Business\\Concrete\\OrderManager.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Concrete\\OrderManager.cs*",
+              "RelativeToolTip": "Business\\Concrete\\OrderManager.cs*",
+              "ViewState": "AgIAACQAAAAAraewnsIOwC8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:37:20.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccessDenied.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Error\\AccessDenied.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Error\\AccessDenied.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Error\\AccessDenied.cshtml",
-              "RelativeToolTip": "UI\\Views\\Error\\AccessDenied.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-13T19:10:49.473Z",
+              "Title": "EfOrderDal.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\DataAccess\\Concrete\\EfOrderDal.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Concrete\\EfOrderDal.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\DataAccess\\Concrete\\EfOrderDal.cs",
+              "RelativeToolTip": "DataAccess\\Concrete\\EfOrderDal.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:37:01.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ErrorController.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\ErrorController.cs",
-              "RelativeDocumentMoniker": "UI\\Controllers\\ErrorController.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\ErrorController.cs",
-              "RelativeToolTip": "UI\\Controllers\\ErrorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAaAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "UI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowC8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T19:10:31.762Z",
+              "WhenOpened": "2025-03-14T21:23:38.072Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Program.cs",
-              "RelativeDocumentMoniker": "UI\\Program.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Program.cs",
-              "RelativeToolTip": "UI\\Program.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAwwFcAAAAAAAAAAAAAAA==",
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "UI\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "UI\\Areas\\Admin\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T19:06:38.77Z",
+              "WhenOpened": "2025-03-14T21:23:33.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Cart\\Index.cshtml",
+              "RelativeDocumentMoniker": "UI\\Views\\Cart\\Index.cshtml",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Cart\\Index.cshtml",
+              "RelativeToolTip": "UI\\Views\\Cart\\Index.cshtml",
+              "ViewState": "AgIAADcBAAAAAAAAAAAAAEABAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-14T21:20:26.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\ProductController.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "UI\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwG0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T20:33:17.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\CartController.cs",
+              "RelativeToolTip": "UI\\Controllers\\CartController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAADwvwUBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T20:21:30.561Z",
               "EditorCaption": ""
             }
           ]

@@ -7,14 +7,22 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using StackExchange.Redis;
 using System.Reflection;
 using UI.Extensions;
+using UI.Helpers.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // MVC ve Validation Servisleri
 builder.Services.AddControllersWithViews()
     .AddFluentValidation(fv => fv.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly()));
+
+// Redis Baðlantýsý
+var redis = ConnectionMultiplexer.Connect("localhost:6379");
+builder.Services.AddSingleton<IConnectionMultiplexer>(redis);
+builder.Services.AddSingleton<RedisHelper>();
+
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>

@@ -7,6 +7,7 @@ using Business.Abstract;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.Dtos;
 
 namespace Business.Concrete
 {
@@ -39,6 +40,11 @@ namespace Business.Concrete
         public IDataResult<Order> GetById(int id)
         {
             return new SuccessDataResult<Order>(_orderDal.Get(o => o.OrderId == id));
+        }
+
+        public IDataResult<List<OrderListDto>> GetOrderDetails()
+        {
+            return new SuccessDataResult<List<OrderListDto>>(_orderDal.GetOrderDetails().OrderBy(o=>o.OrderId).ToList());
         }
 
         public IResult Update(Order entity)

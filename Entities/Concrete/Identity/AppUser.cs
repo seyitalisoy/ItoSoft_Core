@@ -11,8 +11,9 @@ namespace Entities.Concrete.Identity
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
-
-        public string FullName => $"{FirstName} {LastName}";
-        public string? Picture { get; set; }
+        public string? Adress1 { get; set; }
+        public string? Adress2 { get; set; }
+        public string? AdressTitle1 { get; set; }
+        public string? AdressTitle2 { get; set; }
     }
 }

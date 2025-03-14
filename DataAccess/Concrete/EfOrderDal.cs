@@ -6,36 +6,43 @@ using System.Threading.Tasks;
 using Core.DataAccess.EntityFramework;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.Dtos;
 
 namespace DataAccess.Concrete
 {
     public class EfOrderDal : EfEntityRepositoryBase<Order, ECommerceContext>, IOrderDal
     {
-        //public List<OrderListDto> GetOrderDetails()
-        //{
-        //    using (MarketContext context = new MarketContext())
-        //    {
-        //        var result = from o in context.Orders
-        //                     join c in context.Customers
-        //                     on o.CustomerId equals c.Id
-        //                     join p in context.Products
-        //                     on o.ProductId equals p.Id
+        public List<OrderListDto> GetOrderDetails()
+        {
+            using (ECommerceContext context = new ECommerceContext())
+            {
+                var result = from o in context.Orders
+                             join p in context.Products
+                             on o.ProductId equals p.ProductId
+                             join c in context.Categories 
+                             on p.CategoryId equals c.CategoryId
 
-        //                     select new OrderListDto
-        //                     {
-        //                         OrderId = o.OrderId,
-        //                         ProductName = p.Name,
-        //                         CustomerEmail = c.Email,
-        //                         CustomerPhone = c.Phone,
-        //                         OrderDate = o.OrderDate,
-        //                         Amount = o.ProductAmount,
-        //                         Price = o.Price,
-        //                         Adress = o.Adress
-        //                     };
+                             select new OrderListDto
+                             {
+                                 UserId = o.UserId,
+                                 OrderId = o.OrderId,
+                                 ProductName = p.ProductName,
+                                 CustomerEmail = o.Email,
+                                 CustomerFirstName = o.FirstName,
+                                 CustomerLastName = o.LastName,
+                                 CustomerPhone = o.Phone,
+                                 OrderDate = o.OrderDate,
+                                 ProductAmount = o.ProductAmount,
+                                 TotalPrice = o.Price,
+                                 Adress = o.Adress,
+                                 CategoryName = c.CategoryName,
+                                 ProductPicture = p.Picture,
+                                 ProductStock = p.UnitsInStock,
+                             };
 
-        //        return result.ToList();
-        //    }
-        //}
+                return result.ToList();
+            }
+        }
 
     }
 }

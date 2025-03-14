@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DataAccess.DataAccess.Identity
+namespace DataAccess.Identity.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialIdentity : Migration
+    public partial class mig_1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,7 +32,10 @@ namespace DataAccess.DataAccess.Identity
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Picture = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Adress1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Adress2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AdressTitle1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    AdressTitle2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
