@@ -27,17 +27,22 @@ namespace UI.Controllers
 
         public IActionResult Index()
         {
+            TempData["ShowNavbar"] = false;
             return View();
         }
 
         public IActionResult SignUp()
         {
+            TempData["ShowWelcomeMessage"] = true;
+            TempData["ShowNavbar"] = false;
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpViewModel request)
         {
+            
+            TempData["ShowNavbar"] = false;
             if (!ModelState.IsValid)
             {
                 return View();
@@ -74,12 +79,15 @@ namespace UI.Controllers
 
         public IActionResult SignIn()
         {
+            TempData["ShowNavbar"] = false;
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInViewModel request, string? returnUrl = null)
         {
+            TempData["ShowNavbar"] = false;
+            TempData["ShowWelcomeMessage"] = false;
             returnUrl = returnUrl ?? Url.Action("Index", "Home");
 
             var userResult = await _userManager.FindByEmailAsync(request.Email);

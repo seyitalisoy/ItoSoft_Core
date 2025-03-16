@@ -1,8 +1,129 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿﻿@{
+	ViewData["Title"] = "Anasayfa";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<link href="~/css/custom_css/home/index.css" rel="stylesheet" />
+
+
+<link rel="stylesheet"
+	  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+<body>
+	
+	<header class="header">
+		<a asp-controller="Home" asp-action="Index" class="brand">ShopITo</a>
+		<div class="menu-btn">
+		</div>
+		<div class="navegation">
+			<div class="navegation-items">
+				<partial name="_NavbarUserWhite" />
+			</div>
+		</div>
+	</header>
+
+	<section class="home">
+
+		<video src="~/videos/video1.mp4" class="video-slide active" autoplay muted loop></video>
+
+		<video src="~/videos/video2.mp4" class="video-slide" autoplay muted loop></video>
+
+		<video src="~/videos/video3.mp4" class="video-slide" autoplay muted loop></video>
+		<video src="~/videos/video4.mp4" class="video-slide" autoplay muted loop></video>
+
+
+
+		<div class="content active">
+			<h1>ALIŞVERİŞİNİZİ<br><span>KOLAYLAŞTIRIN</span></h1>
+			<p>Binlerce ürünü en iyi fiyatlarla keşfedin. Güvenli alışverişin keyfini çıkarın!</p>
+			@if (User.Identity.IsAuthenticated)
+			{
+				<a asp-controller="Product" asp-action="List" id="btn-home">Şimdi alışverişe başla!</a>
+			}
+			else
+			{
+				<a asp-controller="Home" asp-action="SignUp" id="btn-home">Şimdi üye ol!</a>
+				<a asp-controller="Home" asp-action="SignIn" id="btn-home">Hesabım var</a>
+				@* <a asp-controller="Product" asp-action="List" id="btn-home">Üye olmadan devam et</a> *@
+			}
+		</div>
+
+		<div class="content">
+			<h1>YENİ TRENDLERİ<br><span>KEŞFEDİN</span></h1>
+			<p>En yeni moda, teknoloji ve ev eşyaları koleksiyonlarını hemen inceleyin.</p>
+
+			@if (User.Identity.IsAuthenticated)
+			{
+				<a asp-controller="Product" asp-action="List" id="btn-home">Şimdi alışverişe başla!</a>
+			}
+			else
+			{
+				<a asp-controller="Home" asp-action="SignUp" id="btn-home">Şimdi üye ol!</a>
+				<a asp-controller="Home" asp-action="SignIn" id="btn-home">Hesabım var</a>
+				@* <a asp-controller="Product" asp-action="List" id="btn-home">Üye olmadan devam et</a> *@
+			}
+
+		</div>
+
+		<div class="content">
+			<h1>FIRSATLARI KAÇIRMAYIN</h1>
+			<p>Özel kampanyalar ve indirimlerden haberdar olun. Avantajlı alışverişin tadını çıkarın!</p>
+			@if (User.Identity.IsAuthenticated)
+			{
+				<a asp-controller="Product" asp-action="List" id="btn-home">Şimdi alışverişe başla!</a>
+			}
+			else
+			{
+				<a asp-controller="Home" asp-action="SignUp" id="btn-home">Şimdi üye ol!</a>
+				<a asp-controller="Home" asp-action="SignIn" id="btn-home">Hesabım var</a>
+				@* <a asp-controller="Product" asp-action="List" id="btn-home">Üye olmadan devam et</a> *@
+			}
+		</div>
+		<div class="content">
+			<h1>FIRSATLARI KAÇIRMAYIN</h1>
+			<p>Özel kampanyalar ve indirimlerden haberdar olun. Avantajlı alışverişin tadını çıkarın!</p>
+
+			@if (User.Identity.IsAuthenticated)
+			{
+				<a asp-controller="Product" asp-action="List" id="btn-home">Şimdi alışverişe başla!</a>
+			}
+			else
+			{
+				<a asp-controller="Home" asp-action="SignUp" id="btn-home">Şimdi üye ol!</a>
+				<a asp-controller="Home" asp-action="SignIn" id="btn-home">Hesabım var</a>
+				@* <a asp-controller="Product" asp-action="List" id="btn-home">Üye olmadan devam et</a> *@
+			}
+		</div>
+		<div class="content">
+			<h1>FIRSATLARI KAÇIRMAYIN</h1>
+			<p>Özel kampanyalar ve indirimlerden haberdar olun. Avantajlı alışverişin tadını çıkarın!</p>
+
+			@if (User.Identity.IsAuthenticated)
+			{
+				<a asp-controller="Product" asp-action="List" id="btn-home">Şimdi alışverişe başla!</a>
+			}
+			else
+			{
+				<a asp-controller="Home" asp-action="SignUp" id="btn-home">Şimdi üye ol!</a>
+				<a asp-controller="Home" asp-action="SignIn" id="btn-home">Hesabım var</a>
+				@* <a asp-controller="Product" asp-action="List" id="btn-home">Üye olmadan devam et</a> *@
+			}
+		</div>
+
+		<div class="media-icons">
+			<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+			<a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+		</div>
+
+
+		<div class="slider-navegation">
+			<div class="nav-btn active"></div>
+			<div class="nav-btn"></div>
+			<div class="nav-btn"></div>
+			<div class="nav-btn"></div>
+		</div>
+	</section>
+
+	<script src="~/js/custom_js/home/index.js"></script>
+</body>

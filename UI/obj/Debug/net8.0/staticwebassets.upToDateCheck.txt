@@ -1,7 +1,10 @@
 wwwroot\css\custom_css\error\access_denied.css
 wwwroot\css\custom_css\error\page_not_found.css
+wwwroot\css\custom_css\home\index.css
+wwwroot\css\custom_css\home\navbar_global.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\custom_js\home\index.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -60,3 +63,8 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\videos\video1.mp4
+wwwroot\videos\video2.mp4
+wwwroot\videos\video3.mp4
+wwwroot\videos\video4(1).mp4
+wwwroot\videos\video4.mp4

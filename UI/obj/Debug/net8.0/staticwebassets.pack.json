@@ -13,12 +13,24 @@
       "PackagePath": "staticwebassets\\css\\custom_css\\error\\page_not_found.css"
     },
     {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\home\\index.css",
+      "PackagePath": "staticwebassets\\css\\custom_css\\home\\index.css"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\custom_css\\home\\navbar_global.css",
+      "PackagePath": "staticwebassets\\css\\custom_css\\home\\navbar_global.css"
+    },
+    {
       "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\js\\custom_js\\home\\index.js",
+      "PackagePath": "staticwebassets\\js\\custom_js\\home\\index.js"
     },
     {
       "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\js\\site.js",
@@ -251,6 +263,26 @@
     {
       "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\videos\\video1.mp4",
+      "PackagePath": "staticwebassets\\videos\\video1.mp4"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\videos\\video2.mp4",
+      "PackagePath": "staticwebassets\\videos\\video2.mp4"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\videos\\video3.mp4",
+      "PackagePath": "staticwebassets\\videos\\video3.mp4"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\videos\\video4(1).mp4",
+      "PackagePath": "staticwebassets\\videos\\video4(1).mp4"
+    },
+    {
+      "Id": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\wwwroot\\videos\\video4.mp4",
+      "PackagePath": "staticwebassets\\videos\\video4.mp4"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
