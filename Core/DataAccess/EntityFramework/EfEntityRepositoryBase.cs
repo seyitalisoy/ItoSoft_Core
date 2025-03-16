@@ -16,13 +16,11 @@ namespace Core.DataAccess.EntityFramework
     {
         public void Add(TEntity entity)
         {
-            //using: IDisposable pattern implementation of c#
-            //using bittiği anda garbace collector toplar
             using (TContext context = new TContext())
             {
                 var addedEntity = context.Entry(entity);
-                addedEntity.State = EntityState.Added; //lets the db know, it gets a new value addition 
-                context.SaveChanges(); //here it adds
+                addedEntity.State = EntityState.Added; 
+                context.SaveChanges(); 
             }
         }
 
@@ -49,9 +47,7 @@ namespace Core.DataAccess.EntityFramework
         {
             using (TContext context = new TContext())
             {
-                return context.Set<TEntity>().SingleOrDefault(filter);
-                //context.set -> tells hey go to this context // we will get data back 
-                //.SingleOrDefault -> youll get one ore NONE returned //like es .FirstOrDefault
+                return context.Set<TEntity>().SingleOrDefault(filter);               
             }
         }
 

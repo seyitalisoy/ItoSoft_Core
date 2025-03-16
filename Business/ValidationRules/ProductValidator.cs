@@ -18,8 +18,6 @@ namespace Business.ValidationRules
 
             RuleFor(p => p.CategoryId).NotEmpty().WithMessage("Kategori boş geçilemez");
 
-            //RuleFor(p => p.SupplierId).NotEmpty().WithMessage("Tedarikçi firma boş geçilemez");
-
             RuleFor(p => p.UnitsInStock).NotEmpty().WithMessage("Stok miktarı boş geçilemez");
             RuleFor(p => p.UnitsInStock).LessThan(100).WithMessage("Stok miktarı 100'den az olmalı.");
             RuleFor(p => p.UnitsInStock).GreaterThan(0).WithMessage("Stok miktarı 0'dan fazla olmalı.");

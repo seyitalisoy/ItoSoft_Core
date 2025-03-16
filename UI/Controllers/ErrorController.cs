@@ -10,8 +10,6 @@ namespace UI.Controllers
         }
         public IActionResult PageNotFound()
         {
-            //ViewBag.ShowNavbar = false;
-            //ViewBag.Is404Page = true;
             return View();
         }
     }

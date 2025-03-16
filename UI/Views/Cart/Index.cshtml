@@ -270,7 +270,6 @@ else
 <!-- Bootstrap gizli kısım -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- JavaScript Kodunu Sayfanın Sonunda veya $(document).ready() içinde ekleyin -->
 <script>
 			$(document).ready(function () {
 		$(".quantity-btn").on("click", function () {
@@ -287,13 +286,12 @@ else
 				type: "GET",
 				success: function (response) {
 					if (response.success) {
-						// Sayfadaki tüm ilgili quantity alanlarını güncelle
 						$("span[id='quantity-" + productId + "']").text(response.newQuantity);
 
-						// Fiyat güncelleme (varsa)
+
 						$("span[id='price-" + productId + "']").text(response.newPrice.toFixed(2) + " ₺");
 
-						// Azaltma butonunu kontrol et
+
 						$("#decrease-btn-" + productId).prop("disabled", response.newQuantity === 1);
 					} else {
 						alert(response.message || "Bir hata oluştu. Lütfen tekrar deneyin.");
@@ -305,25 +303,24 @@ else
 			});
 		});
 
-		// Siparişi Tamamla butonuna tıklandığında
+
 		$("#complete-order-btn").on("click", function () {
-			var userId = '@User.Identity.IsAuthenticated'; // Kullanıcı login mi, kontrol et
+			var userId = '@User.Identity.IsAuthenticated'; 
 
 			if (userId === "False") {
-				// Kullanıcı login değilse, modal'ı göster
+
 				$('#confirmationModal').modal('show');
 			}
 		});
 
-		// Hesapla giriş yap butonuna tıklandığında
+
 		$("#login-option").on("click", function () {
-			var returnUrl = '/Cart/CheckoutUser'; // CheckoutUser metoduna yönlendirecek URL
-			window.location.href = '/Home/SignIn?returnUrl=' + encodeURIComponent(returnUrl); // Login sayfasına yönlendir
+			var returnUrl = '/Cart/CheckoutUser'; 
+			window.location.href = '/Home/SignIn?returnUrl=' + encodeURIComponent(returnUrl); 
 		});
 
-		// Hesap olmadan devam et butonuna tıklandığında
 		$("#continue-without-account").on("click", function () {
-			window.location.href = '/Cart/Checkout'; // Checkout sayfasına yönlendir
+			window.location.href = '/Cart/Checkout'; 
 		});
 	});
 </script>

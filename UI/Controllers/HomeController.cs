@@ -12,7 +12,6 @@ using UI.Models.Identity;
 
 namespace UI.Controllers
 {
-    //[Authorize]
     public class HomeController : Controller
     {
 
@@ -78,8 +77,6 @@ namespace UI.Controllers
             return View();
         }
 
-
-        //Redis Cart Transfer
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInViewModel request, string? returnUrl = null)
         {
@@ -97,7 +94,6 @@ namespace UI.Controllers
 
             if (signInResult.Succeeded)
             {
-                // Login olduktan sonra cart bilgisinin Redis'e aktarýlmasý
                 await SyncCartToRedis(userResult);
 
                 return Redirect(returnUrl);
@@ -116,36 +112,28 @@ namespace UI.Controllers
 
         private async Task SyncCartToRedis(AppUser user)
         {
-            // Kullanýcý login olduðunda Session'dan cart bilgisini alýyoruz
             var userId = user.Id;
             var sessionCart = SessionHelper.Get<List<CartItem>>(HttpContext.Session, "Cart");
 
             if (sessionCart != null && sessionCart.Count > 0)
             {
-                // Redis'teki mevcut cart verisini al
                 var redisCart = _redisHelper.GetCart(userId) ?? new List<CartItem>();
 
-                // Session'dan gelen ürünleri Redis'e aktar
                 foreach (var item in sessionCart)
                 {
                     var redisItem = redisCart.FirstOrDefault(c => c.ProductId == item.ProductId);
 
                     if (redisItem != null)
                     {
-                        // Eðer Redis'te bu ürün zaten varsa miktarýný artýr
                         redisItem.Quantity += item.Quantity;
                     }
                     else
                     {
-                        // Eðer Redis'te yoksa, yeni ürün ekle
                         redisCart.Add(item);
                     }
                 }
-
-                // Güncellenmiþ cart verisini Redis'e kaydet
                 _redisHelper.SetCart(userId, redisCart);
 
-                // Session'dan cart bilgisini sil
                 HttpContext.Session.Remove("Cart");
             }
         }

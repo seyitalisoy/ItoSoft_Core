@@ -30,29 +30,14 @@ namespace UI.Areas.Admin.Controllers
             return View();
         }
 
-        //public async Task<IActionResult> UserList()
-        //{
-        //    var userList = await _userManager.Users.ToListAsync();
-        //    var userViewModelList = userList.Select(x => new UserViewModel
-        //    {
-        //        Id = x.Id,
-        //        Email = x.Email,
-        //        Name = x.FullName,
-        //        UserName = x.UserName
-        //    }).ToList();
-
-
-        //    return View(userViewModelList);
-        //}
-
         public async Task<IActionResult> UserList()
         {
-            var users = await _userManager.Users.ToListAsync(); // Kullanýcýlarý al
+            var users = await _userManager.Users.ToListAsync(); 
             var userRoleViewModels = new List<UserRoleViewModel>();
 
             foreach (var user in users)
             {
-                var roles = await _userManager.GetRolesAsync(user); // Kullanýcýnýn rollerini al
+                var roles = await _userManager.GetRolesAsync(user); 
                 userRoleViewModels.Add(new UserRoleViewModel
                 {
                     UserId = user.Id,

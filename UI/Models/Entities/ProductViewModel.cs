@@ -2,7 +2,6 @@
 {
     public class ProductViewModel
     {
-        // attribute veya validasyon
         public string ProductName { get; set; }
         public int CategoryId { get; set; }
         public string Picture { get; set; }

@@ -28,8 +28,7 @@ namespace Business.Concrete
             var validator = new CategoryValidator();
             ValidationResult validationResult = validator.Validate(entity);
             if (!validationResult.IsValid)
-            {
-                //string errorMessages = string.Join("\n", validationResult.Errors.Select(e => e.ErrorMessage));
+            {                
                 return new ErrorResult();
             }
 

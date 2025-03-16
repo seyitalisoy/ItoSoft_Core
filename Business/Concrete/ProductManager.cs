@@ -28,8 +28,7 @@ namespace Business.Concrete
             var validator = new ProductValidator();
             ValidationResult validationResult = validator.Validate(entity);
             if (!validationResult.IsValid)
-            {
-                //string errorMessages = string.Join("\n", validationResult.Errors.Select(e => e.ErrorMessage));
+            {               
                 return new ErrorResult();
             }
             var result = BusinessRules.Run(CheckIfProductNameExist(entity.ProductName));
@@ -63,15 +62,9 @@ namespace Business.Concrete
             var validator = new ProductValidator();
             ValidationResult validationResult = validator.Validate(entity);
             if (!validationResult.IsValid)
-            {
-                //string errorMessages = string.Join("\n", validationResult.Errors.Select(e => e.ErrorMessage));
+            {                
                 return new ErrorResult();
             }
-            //var result = BusinessRules.Run(CheckIfProductNameExist(entity.ProductName));
-            //if (result != null)
-            //{
-            //    return result;
-            //}
             _productDal.Update(entity);
             return new SuccessResult("Ürün başarıyla güncellendi.");
         }

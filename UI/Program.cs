@@ -78,7 +78,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); // Kimlik doðrulama eklendi
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.UseStatusCodePagesWithReExecute("/Error/PageNotFound");

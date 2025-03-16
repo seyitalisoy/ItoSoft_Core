@@ -2,14 +2,8 @@
 {
     public class UserRoleViewModel
     {
-        public string UserId { get; set; } // Kullanıcı ID'si
-        public string UserName { get; set; } // Kullanıcı adı
-        public List<string> Roles { get; set; } // Kullanıcının rollerinin listesi
+        public string UserId { get; set; } 
+        public string UserName { get; set; } 
+        public List<string> Roles { get; set; } 
     }
-    //public class UserRoleViewModel
-    //{
-    //    public string UserId { get; set; } // Kullanıcı ID'si
-    //    public List<string> SelectedRoles { get; set; } // Kullanıcının sahip olduğu roller
-    //}
-
 }

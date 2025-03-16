@@ -24,7 +24,7 @@ namespace UI.Helpers.Redis
         public void SetCart(string userId, List<CartItem> cart)
         {
             var data = JsonConvert.SerializeObject(cart);
-            _database.StringSet(GetCartKey(userId), data, TimeSpan.FromHours(2)); // 2 saat saklama süresi
+            _database.StringSet(GetCartKey(userId), data, TimeSpan.FromHours(2)); 
         }
 
         public void ClearCart(string userId)

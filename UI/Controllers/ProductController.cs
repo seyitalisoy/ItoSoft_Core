@@ -63,7 +63,6 @@ namespace UI.Controllers
                 Price = product.Price,
                 Description = product.Description
             };
-            //validasyonlar gelicek
             var validator = new ProductValidator();
             ValidationResult validationResult = validator.Validate(entity);
             ViewBag.Categories = new SelectList(_categoryService.GetAll().Data, "CategoryId", "CategoryName");
@@ -176,7 +175,7 @@ namespace UI.Controllers
                 TempData["DeleteError"] = "Ürün silinemedi.";
             }
 
-            return RedirectToAction("Index"); // ❗ Tüm kod yollarında RETURN var.
+            return RedirectToAction("Index"); 
         }
 
     }

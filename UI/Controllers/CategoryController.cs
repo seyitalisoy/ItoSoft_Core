@@ -17,7 +17,6 @@ namespace UI.Controllers
 
         public ActionResult Index()
         {
-            //ModelState.Clear();
             var model = _categoryService.GetAll().Data;
             return View(model);
         }
@@ -31,7 +30,7 @@ namespace UI.Controllers
         public ActionResult Add(Category category)
         {
 
-            category.Picture = "Örnek Url";  //URL boş geçilmesin
+            category.Picture = "Örnek Url";  
             var validator = new CategoryValidator();
             ValidationResult validationResult = validator.Validate(category);
 

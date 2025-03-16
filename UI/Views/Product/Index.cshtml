@@ -19,7 +19,7 @@
 }
 @if (TempData["UpdateSuccessMessage"] != null)
 {
-	<h6 class="alert alert-danger">@TempData["UpdateSuccessMessage"]</h6>
+	<h6 class="alert alert-success">@TempData["UpdateSuccessMessage"]</h6>
 }
 <!-- Silme Onay Modal -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -49,9 +49,6 @@
 			<th>
 				Ürün Adı
 			</th>
-			@*             <th>
-                @Html.DisplayNameFor(model => model.Category)
-            </th> *@
 			<th>
 				Fotoğraf
 			</th>
@@ -61,12 +58,6 @@
 			<th>
 				Fiyat
 			</th>
-			@*             <th>
-                @Html.DisplayNameFor(model => model.IsHome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsApproved)
-            </th>*@
 			<th></th>
 		</tr>
 	</thead>
@@ -77,9 +68,6 @@
 				<td>
 					@Html.DisplayFor(modelItem => item.ProductName)
 				</td>
-				@*                 <td>
-                    @Html.DisplayFor(modelItem => item.Category.Description)
-                </td> *@
 				<td>
 					<img src="@item.Picture" class="w-25" />
 				</td>
@@ -89,12 +77,6 @@
 				<td>
 					@Html.DisplayFor(modelItem => item.Price)
 				</td>
-				@*                 <td>
-                    @Html.DisplayFor(modelItem => item.IsHome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IsApproved)
-                </td> *@
 				<td>
 					<a class="btn btn-outline-success" asp-action="Update" asp-route-id="@item.ProductId">Düzenle</a> |
 					<a class="btn btn-outline-primary" asp-action="GetProductDetails" asp-route-id="@item.ProductId">Detay</a> 
@@ -104,14 +86,6 @@
 						<button type="button" class="btn btn-outline-danger deleteBtn" data-id="@item.ProductId">Sil</button>
 					</form>
 				</td>
-			@* 	<form asp-controller="Product" asp-action="Delete" method="post" class="d-inline" onsubmit="return confirm('Bu ürünü silmek istediğinize emin misiniz?');">
-					<input type="hidden" name="id" value="@item.ProductId" />
-					<button type="submit" class="btn btn-outline-danger">Sil</button>
-				</form> *@
-				@* </td> *@
-				
-
-
 			</tr>
 		}
 	</tbody>
@@ -123,7 +97,7 @@
 
 		document.querySelectorAll(".deleteBtn").forEach(button => {
 			button.addEventListener("click", function () {
-				selectedForm = this.closest("form"); // İlgili formu al
+				selectedForm = this.closest("form"); 
 				let modal = new bootstrap.Modal(document.getElementById("confirmDeleteModal"));
 				modal.show();
 			});
@@ -131,7 +105,7 @@
 
 		document.getElementById("confirmDeleteBtn").addEventListener("click", function () {
 			if (selectedForm) {
-				selectedForm.submit(); // Onay verilirse formu gönder
+				selectedForm.submit(); 
 			}
 		});
 	});
