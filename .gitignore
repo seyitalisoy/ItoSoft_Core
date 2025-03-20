@@ -3,7 +3,7 @@ DataAccess/Concrete/ECommerceContext.cs
 UI/appsettings.json
 UI/appsettings.Development.json
 
-WebAPI/aappsettings.json
+WebAPI/appsettings.json
 WebAPI/appsettings.Development.json
 
 .vs/
