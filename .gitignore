@@ -7,3 +7,5 @@ WebAPI/appsettings.json
 WebAPI/appsettings.Development.json
 
 .vs/
+/WebAPI/appsettings.json
+/WebAPI/appsettings.Development.json
