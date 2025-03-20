@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8juib6ZMVKc=",
+  "dgSpecHash": "iJy0KJ7XQFg=",
   "success": true,
   "projectFilePath": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cemal\\.nuget\\packages\\autofac\\8.2.0\\autofac.8.2.0.nupkg.sha512",
     "C:\\Users\\cemal\\.nuget\\packages\\autofac.extensions.dependencyinjection\\10.0.0\\autofac.extensions.dependencyinjection.10.0.0.nupkg.sha512",
+    "C:\\Users\\cemal\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\cemal\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\cemal\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\cemal\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",

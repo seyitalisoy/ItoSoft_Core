@@ -16,7 +16,6 @@ namespace Entities.Concrete
         public string UserId { get; set; }
         public int OrderId { get; set; }
         public int ProductId { get; set; }
-        public virtual Product Product { get; set; }
         public DateTime OrderDate { get; set; }
         public int ProductAmount { get; set; }
         public decimal Price { get; set; } //total

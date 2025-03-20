@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules;
+using Core.Entities;
 using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -29,7 +30,7 @@ namespace Business.Concrete
             ValidationResult validationResult = validator.Validate(entity);
             if (!validationResult.IsValid)
             {               
-                return new ErrorResult();
+                return new ErrorResult("Ürün Eklenmedi");
             }
             var result = BusinessRules.Run(CheckIfProductNameExist(entity.ProductName));
             if (result != null)
@@ -43,13 +44,17 @@ namespace Business.Concrete
         public IResult Delete(Product entity)
         {
             _productDal.Delete(entity);
-            return new SuccessResult();
+            return new SuccessResult("Ürün silindi.");
         }
 
         public IDataResult<Product> GetById(int id)
         {
-
-            return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == id));
+            var result = _productDal.Get(p => p.ProductId == id);
+            if (result!=null)
+            {
+                return new SuccessDataResult<Product>(result);
+            }
+            return new ErrorDataResult<Product>("Ürün bulunamadı");
         }
 
         public IDataResult<List<Product>> GetAll()
@@ -63,7 +68,7 @@ namespace Business.Concrete
             ValidationResult validationResult = validator.Validate(entity);
             if (!validationResult.IsValid)
             {                
-                return new ErrorResult();
+                return new ErrorResult("Güncelleme başarısız.");
             }
             _productDal.Update(entity);
             return new SuccessResult("Ürün başarıyla güncellendi.");
@@ -80,6 +85,15 @@ namespace Business.Concrete
 
         }
 
-
+        public IResult DeleteById(int id)
+        {
+            var result = _productDal.Get(p => p.ProductId == id);
+            if (result!=null)
+            {
+                _productDal.Delete(result);
+                return new SuccessResult("Ürün silindi.");
+            }
+            return new ErrorResult("Ürün bulunamadı.");
+        }
     }
 }

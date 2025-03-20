@@ -16,5 +16,6 @@ namespace Business.Abstract
         IResult Add(Product entity);
         IResult Delete(Product entity);
         IResult Update(Product entity);
+        IResult DeleteById(int id);
     }
 }

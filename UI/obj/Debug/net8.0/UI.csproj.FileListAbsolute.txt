@@ -84,6 +84,8 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\NuGet.Packaging.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\NuGet.ProjectModel.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\NuGet.Protocol.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\NuGet.Versioning.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\StackExchange.Redis.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\System.ClientModel.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\System.CodeDom.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\System.Composition.AttributedModel.dll
@@ -290,6 +292,7 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.MvcApplicationPar
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.RazorAssemblyInfo.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.RazorAssemblyInfo.cs
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.sourcelink.json
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\scopedcss\bundle\UI.styles.css
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\scopedcss\projectbundle\UI.bundle.scp.css
@@ -302,13 +305,10 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets\msbu
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.UI.props
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.UI.props
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets.pack.json
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.csproj.Up2Date
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\refint\UI.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.genruntimeconfig.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\ref\UI.dll
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

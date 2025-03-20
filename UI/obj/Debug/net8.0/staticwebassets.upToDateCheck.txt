@@ -66,5 +66,4 @@ wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\videos\video1.mp4
 wwwroot\videos\video2.mp4
 wwwroot\videos\video3.mp4
-wwwroot\videos\video4(1).mp4
 wwwroot\videos\video4.mp4
