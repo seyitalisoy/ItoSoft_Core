@@ -9,6 +9,7 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\UI.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\UI.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\Autofac.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\AutoMapper.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\Azure.Core.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\Azure.Identity.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\bin\Debug\net8.0\FluentValidation.dll
@@ -305,10 +306,10 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets\msbu
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.UI.props
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.UI.props
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets.pack.json
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.csproj.Up2Date
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\refint\UI.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\UI.genruntimeconfig.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\ref\UI.dll
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\UI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

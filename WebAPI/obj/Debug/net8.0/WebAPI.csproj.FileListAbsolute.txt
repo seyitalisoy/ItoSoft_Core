@@ -8,6 +8,7 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\WebAPI.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\WebAPI.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Autofac.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\AutoMapper.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Azure.Core.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Azure.Identity.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\FluentValidation.dll
@@ -108,4 +109,3 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\obj\Debug\net8.0\refint\WebAPI.dl
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\AutoMapper.dll
