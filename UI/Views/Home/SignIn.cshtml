@@ -1,36 +1,43 @@
 ﻿@model SignInViewModel
 
-<div class="row">
-    <div class="col-md-4 offset-md-4">
-        <h2>Kullanıcı Giriş </h2>
+<div class="row justify-content-center align-items-center min-vh-100" style="background-color: #d2f5f7;">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h1 class="text-center mb-4 text-primary" style="font-size: 2.5rem;">ShopITo - Kullanıcı Girişi</h1>
 
-        <div asp-validation-summary=ModelOnly class="alert alert-danger" role="alert">
-        </div>
-        <form asp-controller="Home" asp-action="SignIn" asp-route-returnurl="@Context.Request.Query["returnUrl"]" method="post">
-            <div class="mb-3">
-                <label for="Email" class="form-label" asp-for="Email"></label>
-                <input class="form-control" asp-for="Email">
-                <span class="text-danger" asp-validation-for="Email"></span>
-            </div>
-            <div class="mb-3">
-                <label for="Password" class="form-label" asp-for="Password"></label>
-                <input type="password" class="form-control" asp-for="Password">
-            </div>
+                <!-- Hata mesajları -->
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert">
+                </div>
 
-            <div class="row">
-                <div class="col-md-6">
-
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" asp-for="RememberMe">
-                        <label class="form-check-label" for="RememberMe" asp-for="RememberMe"></label>
+                <form asp-controller="Home" asp-action="SignIn" asp-route-returnurl="@Context.Request.Query["returnUrl"]" method="post">
+                    <div class="mb-3">
+                        <label for="Email" class="form-label" asp-for="Email" style="font-size: 1.2rem;">E-posta</label>
+                        <input class="form-control" asp-for="Email" placeholder="E-posta adresinizi girin" style="font-size: 1.2rem;" />
+                        <span class="text-danger" asp-validation-for="Email" style="font-size: 1rem;"></span>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <a class="float-end" asp-controller="Home" asp-action="ForgetPassword">Şifremi Unuttum</a>
-                </div>
+                    <div class="mb-3">
+                        <label for="Password" class="form-label" asp-for="Password" style="font-size: 1.2rem;">Şifre</label>
+                        <input type="password" class="form-control" asp-for="Password" placeholder="Şifrenizi girin" style="font-size: 1.2rem;" />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="mb-3 form-check" style="font-size: 1.2rem;">
+                                <input type="checkbox" class="form-check-input" asp-for="RememberMe" />
+                                <label class="form-check-label" for="RememberMe" asp-for="RememberMe">Beni hatırla</label>
+                            </div>
+                        </div>
+                        <div class="col-6 text-end">
+                            <a href="#" class="text-muted" style="font-size: 1.1rem;">Şifremi Unuttum?</a>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100" style="font-size: 1.3rem;">Üye Giriş</button>
+                </form>
+                <p class="text-center mt-3" style="font-size: 1.2rem;">Henüz üye değil misiniz? <a href="@Url.Action("SignUp", "Home")" class="text-primary" style="font-size: 1.3rem;">Kayıt Olun</a></p>
             </div>
-            <button type="submit" class="btn btn-primary">Üye Giriş</button>
-        </form>
+        </div>
     </div>
 </div>
 

@@ -1,0 +1,136 @@
+﻿﻿@{
+    ViewData["Title"] = "Bilgileri Güncelle";
+}
+
+@model EditUserViewModel
+
+<div class="container mt-5">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="mb-4">Kullanıcı Bilgi Güncelleme</h2>
+
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-info alert-dismissible" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            }
+
+            <div asp-validation-summary=ModelOnly class="alert alert-danger" role="alert">
+            </div>
+
+            <form asp-controller="Member" asp-action="EditUser" method="post">
+
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="FirstName"></label>
+                    <div class="col-md-8">
+
+                        <input type="text" asp-for="FirstName" class="form-control" required>
+                        <span class="text-danger" asp-validation-for="FirstName"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="LastName"></label>
+                    <div class="col-md-8">
+
+                        <input type="text" asp-for="LastName" class="form-control" required>
+                        <span class="text-danger" asp-validation-for="LastName"></span>
+                    </div>
+                </div>
+
+
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="UserName"></label>
+                    <div class="col-md-8">
+
+                        <input type="text" asp-for="UserName" class="form-control" required>
+                        <span class="text-danger" asp-validation-for="UserName"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="Email"></label>
+                    <div class="col-md-8 ui">
+                        <input type="email" asp-for="Email" class="form-control" required>
+                        <span class="text-danger" asp-validation-for="Email"></span>
+                    </div>
+                    
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="Phone"></label>
+                    <div class="col-md-8">
+                        <input asp-for="Phone" placeholder="5XXXXXXXXX" id="phoneNumber" class="form-control" maxlength="10" required>
+                        <span class="text-danger" asp-validation-for="Phone"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="AdressTitle1"></label>
+                    <div class="col-md-8">
+
+                        <input type="text" asp-for="AdressTitle1" class="form-control" required>
+                        <span class="text-danger" asp-validation-for="AdressTitle1"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="Adress1"></label>
+                    <div class="col-md-8">
+
+                        <input type="text" asp-for="Adress1" class="form-control" required>
+                        <span class="text-danger" asp-validation-for="Adress1"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="AdressTitle2"></label>
+                    <div class="col-md-8">
+
+                        <input type="AdressTitle2" asp-for="AdressTitle2" class="form-control" required>
+                        <span class="text-danger" asp-validation-for="AdressTitle2"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 col-form-label" asp-for="Adress2"></label>
+                    <div class="col-md-8">
+
+                        <input type="text" asp-for="Adress2" class="form-control" required>
+                        <span class="text-danger" asp-validation-for="Adress2"></span>
+                    </div>
+                </div>
+
+                <div class="row mt-5 mb-5">
+                    <div class="col-md-8 text-center">
+                        <button type="submit" class="ui blue button">Güncelle</button>
+                    </div>
+                </div>
+
+            </form>
+
+            <hr />
+            <div class="row mt-4 mb-4">
+                <h2>Şifre Güncelleme</h2>
+                <a asp-controller="Member" asp-action="ChangePassword">
+                    <button class="ui red button">Şifre değiştir</button>
+                </a>
+            </div>            
+        </div>       
+    </div>
+</div>
+
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+
+    @* <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> *@
+
+}

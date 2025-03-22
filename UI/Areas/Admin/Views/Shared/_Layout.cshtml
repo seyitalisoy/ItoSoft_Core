@@ -15,8 +15,24 @@
 	@await RenderSectionAsync("Css", required: false)
 </head>
 <body>
+	<style>
+		/* Navbar'ı siyah arka plan ve beyaz metin yapmak */
+		.navbar-dark {
+			background-color: #000 !important; /* Navbar arka planını siyah yap */
+		}
+
+		.navbar-nav .nav-link {
+			font-weight: bold; /* Navbar'daki metinleri kalın yap */
+			color: #fff !important; /* Metin rengini beyaz yap */
+		}
+
+			.navbar-nav .nav-link:hover {
+				color: #f8f9fa !important; /* Hover efekti ile metin beyaz tonunda olabilir */
+			}
+
+	</style>
 	<header>
-		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+		<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
 			<div class="container-fluid">
 				<a class="navbar-brand" asp-area="Admin" asp-controller="Home" asp-action="Index">Admin</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -26,33 +42,31 @@
 				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
 					<ul class="navbar-nav flex-grow-1">
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="Admin" asp-controller="Home" asp-action="UserList">Kullanıcılar</a>
+							<a class="nav-link text-white fw-bold" asp-area="Admin" asp-controller="Home" asp-action="UserList">Kullanıcılar</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="Admin" asp-controller="Role" asp-action="RoleList">Roller</a>
+							<a class="nav-link text-white fw-bold" asp-area="Admin" asp-controller="Role" asp-action="RoleList">Roller</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="Admin" asp-controller="Order" asp-action="Index">Siparişler</a>
+							<a class="nav-link text-white fw-bold" asp-area="Admin" asp-controller="Order" asp-action="Index">Siparişler</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="Admin" asp-controller="Category" asp-action="Index">Kategoriler</a>
+							<a class="nav-link text-white fw-bold" asp-area="Admin" asp-controller="Category" asp-action="Index">Kategoriler</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="Admin" asp-controller="Product" asp-action="Index">Ürünler</a>
+							<a class="nav-link text-white fw-bold" asp-area="Admin" asp-controller="Product" asp-action="Index">Ürünler</a>
 						</li>
-						
 					</ul>
 					<ul class="navbar-nav ">
 						<li class="nav-item">
-							<a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">ShopITo</a>
+							<a class="nav-link text-white fw-bold" asp-area="" asp-controller="Home" asp-action="Index">ShopITo</a>
 						</li>
-						
 					</ul>
-
 				</div>
 			</div>
 		</nav>
 	</header>
+
 	<div class="container">
 		<main role="main" class="pb-3">
 			@RenderBody()
@@ -61,7 +75,7 @@
 		<br />
 		<br />
 	</div>
-	<footer class="footer text-muted" style="position: relative; bottom: 0; width: 100%; background-color: #f8f9fa; padding: 40px 0; border-top: 1px solid #e0e0e0;">
+	<footer class="footer text-muted" style="position: relative; bottom: 0; width: 100%; background-color: #a0e0e0; padding: 40px 0; border-top: 1px solid #e0e0e0;">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
@@ -85,9 +99,14 @@
 				<div class="col-md-4">
 					<h5>Bize Ulaşın</h5>
 					<ul style="list-style: none; padding-left: 0;">
-						<li><a href="mailto:info@shopito.com" style="text-decoration: none; color: #555;">info@shopito.com</a></li>
-						<li><a href="tel:+1234567890" style="text-decoration: none; color: #555;">+1 234 567 890</a></li>
-						<li><a href="#" style="text-decoration: none; color: #555;">Adres: ABC Caddesi, No: 123, İstanbul</a></li>
+						<li><a href="mailto:soyseyitali23@gmail.com" style="text-decoration: none; color: #555;">soyseyitali23@gmail.com</a></li>
+						<li><a href="#" style="text-decoration: none; color: #555;">0534 830 92 32</a></li>
+						<li>
+							<a href="https://www.google.com/maps/place/SoftITo+Yaz%C4%B1l%C4%B1m+-+Bili%C5%9Fim+Akademisi+(%C4%B0stanbul+Ticaret+Odas%C4%B1)/%4040.9854883,28.8319145,17z/data=!3m1!4b1!4m6!3m5!1s0x14caa3c34bae1ca7:0xa3ba77557c2ae636!8m2!3d40.9854883!4d28.8319145!16s%2Fg%2F11v6371n7k?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D" style="text-decoration: none; color: #555;">
+								İstanbul Dünya Ticaret Merkezi, 34149 Bakırköy/İstanbul
+							</a>
+						</li>
+
 					</ul>
 				</div>
 			</div>
@@ -98,6 +117,7 @@
 			</div>
 		</div>
 	</footer>
+
 
 
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>

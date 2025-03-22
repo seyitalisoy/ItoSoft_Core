@@ -1,0 +1,43 @@
+﻿@model CategoryUpdateViewModel
+
+@section Scripts
+{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h2>Kategori Güncelle</h2>
+
+        <div asp-validation-summary=ModelOnly class="alert alert-danger" role="alert">
+        </div>
+
+        <form asp-controller="Category" asp-action="Update" method="post" asp-area="admin">
+
+            <input type="hidden" asp-for="CategoryId" />
+
+            <div class="row mb-3">
+                <label for="Name" class="col-md-4 col-form-label" asp-for="Name"></label>
+                <div class="col-md-8 ">
+                    <input asp-for="Name" class="form-control">
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="Description" class="col-md-4 col-form-label" asp-for="Description"></label>
+                <div class="col-md-8">
+                    <input asp-for="Description" class="form-control">
+                    <span class="text-danger" asp-validation-for="Description"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-8 offset-md-4">
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

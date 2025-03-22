@@ -9,7 +9,9 @@ using Business.ValidationRules;
 using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
+using DataAccess.Concrete;
 using Entities.Concrete;
+using FluentValidation;
 using FluentValidation.Results;
 
 namespace Business.Concrete
@@ -59,8 +61,14 @@ namespace Business.Concrete
 
         public IResult Update(Category entity)
         {
+            var validator = new CategoryValidator();
+            ValidationResult validationResult = validator.Validate(entity);
+            if (!validationResult.IsValid)
+            {
+                return new ErrorResult("Güncelleme başarısız.");
+            }
             _categoryDal.Update(entity);
-            return new SuccessResult();
+            return new SuccessResult("Kategori başarıyla güncellendi.");
         }
 
         private IResult CheckIfCategoryNameExist(string categoryName)

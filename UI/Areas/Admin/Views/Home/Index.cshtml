@@ -1,8 +1,83 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Admin Paneli - Ana Sayfa";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid mt-5">
+
+    <div class="row justify-content-center">
+        <div class="col-12 text-center mb-4">
+            <h1 class="display-4 fw-bold text-primary">Admin Paneli</h1>
+            <p class="lead text-primary">Hoş geldiniz! Paneli kullanarak sistem yönetimini gerçekleştirebilirsiniz.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-circle fs-1 text-primary"></i>
+                    <h5 class="card-title mt-3">Kullanıcı Yönetimi</h5>
+                    <p class="card-text">Kullanıcılarınızı yönetin, yeni kullanıcı ekleyin, mevcutları güncelleyin.</p>
+                    <a href="@Url.Action("UserList", "Home")" class="btn btn-primary">Yönetim Sayfasına Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <div class="card-body text-center">
+                    <i class="bi bi-shield-lock fs-1 text-success"></i>
+                    <h5 class="card-title mt-3">Rol Yönetimi</h5>
+                    <p class="card-text">Kullanıcılara roller atayın, yeni roller oluşturun ve düzenleyin.</p>
+                    <a href="@Url.Action("RoleList", "Role")" class="btn btn-success">Yönetim Sayfasına Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <div class="card-body text-center">
+                    <i class="bi bi-gear fs-1 text-warning"></i>
+                    <h5 class="card-title mt-3">Sistem Ayarları</h5>
+                    <p class="card-text">Sistem ayarlarınızı yapın, genel yönetim seçeneklerini düzenleyin.</p>
+                    <a href="#" class="btn btn-warning">Ayarlar Sayfasına Git</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <h3 class="text-light">Hızlı Erişim</h3>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <div class="card-body text-center">
+                    <i class="bi bi-calendar-event fs-1 text-info"></i>
+                    <h5 class="card-title mt-3">Etkinlikler</h5>
+                    <p class="card-text">Yaklaşan etkinlikleri görüntüleyin.</p>
+                    <a href="#" class="btn btn-info">Etkinlikler</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <div class="card-body text-center">
+                    <i class="bi bi-envelope fs-1 text-danger"></i>
+                    <h5 class="card-title mt-3">Mesajlar</h5>
+                    <p class="card-text">Gelen mesajları hızlıca kontrol edin.</p>
+                    <a href="#" class="btn btn-danger">Mesajlar</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <div class="card-body text-center">
+                    <i class="bi bi-bell fs-1 text-warning"></i>
+                    <h5 class="card-title mt-3">Bildirimler</h5>
+                    <p class="card-text">Yeni bildirimleri görüntüleyin.</p>
+                    <a href="#" class="btn btn-warning">Bildirimler</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

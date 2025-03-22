@@ -1,102 +1,114 @@
 ﻿@model SignUpViewModel
 
-<div class="row">
-	<div class="col-md-6 offset-md-3"></div>
-	<h2>Kullanıcı kayıt</h2>
+<div class="row justify-content-center align-items-center min-vh-100" style="background-color: #d2f5f7;">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h1 class="text-center mb-4 text-primary" style="font-size: 2.5rem;">ShopITo - Kullanıcı Kayıt</h1> <!-- ShopITo Eklendi -->
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-info" role="alert" style="font-size: 1.2rem;">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
 
-	@if (TempData["SuccessMessage"] != null)
-	{
-		<div class="alert alert-info" role="alert">
-			@TempData["SuccessMessage"]
-		</div>
-	}
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert" style="font-size: 1.2rem;">
+                </div>
 
-	<div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert">
-	</div>
+                <form asp-controller="Home" asp-action="SignUp" method="post">
+                    <div class="row mb-3">
+                        <label for="UserName" class="col-md-4 col-form-label" asp-for="UserName" style="font-size: 1.2rem;"></label>
+                        <div class="col-md-8">
+                            <input asp-for="UserName" class="form-control" style="font-size: 1.2rem;" />
+                            <span class="text-danger" asp-validation-for="UserName" style="font-size: 1rem;"></span>
+                        </div>
+                    </div>
 
-	<form asp-controller="Home" asp-action="SignUp" method="post">
-		<div class="row mb-3">
-			<label for="UserName" class="col-md-4 col-form-label" asp-for="UserName"></label>
-			<div class="col-md-8">
-				<input asp-for="UserName" class="form-control" />
-				<span class="text-danger" asp-validation-for="UserName"></span>
-			</div>
-		</div>
+                    <div class="row mb-3">
+                        <label for="FirstName" class="col-md-4 col-form-label" asp-for="FirstName" style="font-size: 1.2rem;"></label>
+                        <div class="col-md-8">
+                            <input asp-for="FirstName" class="form-control" style="font-size: 1.2rem;" />
+                            <span class="text-danger" asp-validation-for="FirstName" style="font-size: 1rem;"></span>
+                        </div>
+                    </div>
 
-		<div class="row mb-3">
-			<label for="FirstName" class="col-md-4 col-form-label" asp-for="FirstName"></label>
-			<div class="col-md-8">
-				<input asp-for="FirstName" class="form-control" />
-				<span class="text-danger" asp-validation-for="FirstName"></span>
-			</div>
-		</div>
+                    <div class="row mb-3">
+                        <label for="LastName" class="col-md-4 col-form-label" asp-for="LastName" style="font-size: 1.2rem;"></label>
+                        <div class="col-md-8">
+                            <input asp-for="LastName" class="form-control" style="font-size: 1.2rem;" />
+                            <span class="text-danger" asp-validation-for="LastName" style="font-size: 1rem;"></span>
+                        </div>
+                    </div>
 
-		<div class="row mb-3">
-			<label for="LastName" class="col-md-4 col-form-label" asp-for="LastName"></label>
-			<div class="col-md-8">
-				<input asp-for="LastName" class="form-control" />
-				<span class="text-danger" asp-validation-for="LastName"></span>
-			</div>
-		</div>
+                    <div class="row mb-3">
+                        <label for="Adress1" class="col-md-4 col-form-label" asp-for="Adress1" style="font-size: 1.2rem;"></label>
+                        <div class="col-md-8">
+                            <input asp-for="Adress1" class="form-control" style="font-size: 1.2rem;" />
+                            <span class="text-danger" asp-validation-for="Adress1" style="font-size: 1rem;"></span>
+                        </div>
+                    </div>
 
-		<div class="row mb-3">
-			<label for="Adress1" class="col-md-4 col-form-label" asp-for="Adress1"></label>
-			<div class="col-md-8">
-				<input asp-for="Adress1" class="form-control" />
-				<span class="text-danger" asp-validation-for="Adress1"></span>
-			</div>
-		</div>
+                    <div class="row mb-3">
+                        <label for="AdressTitle1" class="col-md-4 col-form-label" asp-for="AdressTitle1" style="font-size: 1.2rem;"></label>
+                        <div class="col-md-8">
+                            <input asp-for="AdressTitle1" class="form-control" style="font-size: 1.2rem;" />
+                            <span class="text-danger" asp-validation-for="AdressTitle1" style="font-size: 1rem;"></span>
+                        </div>
+                    </div>
 
-		<div class="row mb-3">
-			<label for="AdressTitle1" class="col-md-4 col-form-label" asp-for="AdressTitle1"></label>
-			<div class="col-md-8">
-				<input asp-for="AdressTitle1" class="form-control" />
-				<span class="text-danger" asp-validation-for="AdressTitle1"></span>
-			</div>
-		</div>
+                    <div class="row mb-3">
+                        <label for="Email" class="col-md-4 col-form-label" asp-for="Email" style="font-size: 1.2rem;"></label>
+                        <div class="col-md-8">
+                            <input asp-for="Email" class="form-control" style="font-size: 1.2rem;" />
+                            <span class="text-danger" asp-validation-for="Email" style="font-size: 1rem;"></span>
+                        </div>
+                    </div>
 
-		<div class="row mb-3">
-			<label for="Email" class="col-md-4 col-form-label" asp-for="Email"></label>
-			<div class="col-md-8">
-				<input asp-for="Email" class="form-control">
-				<span class="text-danger" asp-validation-for="Email"></span>
-			</div>
-		</div>
+                    <div class="row mb-3">
+                        <label class="col-md-4 col-form-label" asp-for="Phone"></label>
+                        <div class="col-md-8">
+                            <input asp-for="Phone" placeholder="5XXXXXXXXX" id="phoneNumber" class="form-control" maxlength="10" required>
+                            <span class="text-danger" asp-validation-for="Phone"></span>
+                        </div>
+                    </div>
 
-		<div class="row mb-3">
-			<label for="Phone" class="col-md-4 col-form-label" asp-for="Phone"></label>
-			<div class="col-md-8">
-				<input asp-for="Phone" class="form-control">
-				<span class="text-danger" asp-validation-for="Phone"></span>
-			</div>
-		</div>
+                    <div class="row mb-3">
+                        <label for="Password" class="col-md-4 col-form-label" asp-for="Password" style="font-size: 1.2rem;"></label>
+                        <div class="col-md-8">
+                            <input asp-for="Password" class="form-control" style="font-size: 1.2rem;" />
+                            <span class="text-danger" asp-validation-for="Password" style="font-size: 1rem;"></span>
+                        </div>
+                    </div>
 
-		<div class="row mb-3">
-			<label for="Password" class="col-md-4 col-form-label" asp-for="Password"></label>
-			<div class="col-md-8">
+                    <div class="row mb-3">
+                        <label for="PasswordConfirm" class="col-md-4 col-form-label" asp-for="PasswordConfirm" style="font-size: 1.2rem;"></label>
+                        <div class="col-md-8">
+                            <input asp-for="PasswordConfirm" class="form-control" style="font-size: 1.2rem;" />
+                            <span class="text-danger" asp-validation-for="PasswordConfirm" style="font-size: 1rem;"></span>
+                        </div>
+                    </div>
 
-				<input asp-for="Password" class="form-control">
-				<span class="text-danger" asp-validation-for="Password"></span>
-			</div>
-		</div>
-
-		<div class="row mb-3">
-			<label for="PasswordConfirm" class="col-md-4 col-form-label" asp-for="PasswordConfirm"></label>
-			<div class="col-md-8">
-				<input asp-for="PasswordConfirm" class="form-control">
-				<span class="text-danger" asp-validation-for="PasswordConfirm"></span>
-			</div>
-		</div>
-
-		<div class="row mb-3">
-			<div class="col-md-8 offset-md-4">
-				<button type="submit" class="btn btn-primary">Kayıt Ol</button>
-			</div>
-		</div>
-
-	</form>
+                    <div class="row mb-3">
+                        <div class="col-md-8 offset-md-4">
+                            <button type="submit" class="btn btn-primary" style="font-size: 1.3rem;">Kayıt Ol</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
-@section Scripts{
-	@await Html.PartialAsync("_ValidationScriptsPartial");
+<!-- Sabitlenen Giriş Yap Butonu -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="fixed-bottom mb-4">
+        <div class="text-center">
+            <a href="@Url.Action("SignIn", "Home")" class="btn btn-success btn-lg w-75" style="font-size: 1.2rem;">Giriş Yap</a>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial");
 }

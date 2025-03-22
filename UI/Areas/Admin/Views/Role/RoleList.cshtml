@@ -1,7 +1,7 @@
 ﻿@model List<RoleListViewModel>
-
+<h1 class="text-center fw-light">Roller</h1>
 <div class="text-center d-flex justify-content-between mt-4">
-    <h1 class="fw-light">RoleList</h1>
+    
 
     @if (TempData["RoleDeleted"] as bool? ?? false)
     {
@@ -20,31 +20,33 @@
     }
 
     <a asp-action="CreateRole">
-        <button class="btn btn-primary fw-bold">Rol ekle</button>
+        <button class="btn btn-primary fw-bold w-auto" style="max-width: 200px;">Rol ekle</button>
     </a>
 </div>
 
-<div class="container mt-4">
-    <table class="table table-bordered table-striped text-center">
-        <thead class="table-light">
-            <tr>
-                <th>Id</th>
-                <th>RoleName</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+<div class="container mt-4 d-flex justify-content-center">
+    <div class="table-responsive w-100" style="max-width: 1200px;">
+        <table class="table table-hover table-striped table-bordered text-center align-middle">
+            <thead class="table-dark">
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Name</td>
-                    <td>
-                        <a class="btn btn-warning text-dark me-4" asp-area="Admin" asp-controller="Role" asp-action="UpdateRole" asp-route-id="@item.Id">Güncelle</a>
-                        <a class="btn btn-danger" asp-area="Admin" asp-controller="Role" asp-action="DeleteRole" asp-route-id="@item.Id">Sil</a>
-                    </td>
+                    <th>Id</th>
+                    <th>RoleName</th>
+                    <th>Aksiyonlar</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>
+                            <a class="btn btn-outline-success" asp-area="Admin" asp-controller="Role" asp-action="UpdateRole" asp-route-id="@item.Id">Güncelle</a>
+                            <a class="btn btn-outline-danger" asp-area="Admin" asp-controller="Role" asp-action="DeleteRole" asp-route-id="@item.Id">Sil</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>

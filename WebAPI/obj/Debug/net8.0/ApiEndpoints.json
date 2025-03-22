@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "WebAPI.Controllers.OrdersController",
+    "Method": "GetOrderDetails",
+    "RelativePath": "api/Orders/orderdetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebAPI.Controllers.ProductsController",
     "Method": "AddProduct",
     "RelativePath": "api/Products/add",

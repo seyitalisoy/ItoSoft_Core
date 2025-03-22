@@ -11,7 +11,7 @@
 					<h3 class="card-title">@Model.ProductName</h3>
 					<h5 class="text-muted">Kategori: @Model.CategoryName</h5>
 					<p class="card-text">@Model.Description</p>
-					<p class="card-text"><strong>Fiyat:</strong> @Model.Price.ToString("C")</p>
+					<p class="card-text"><strong>Fiyat:</strong> @Model.Price ₺</p>
 					<p class="card-text">
 						<strong>Stok Durumu:</strong>
 						@if (Model.UnitsInStock > 0)
@@ -26,15 +26,12 @@
 
 					<form asp-controller="Cart" asp-action="AddToCart" method="post" >
 						<input type="hidden" name="productId" value="@Model.ProductId" />
-						<button type="submit" class="btn btn-outline-success btn-sm float-end">
+						<button type="submit" class="btn btn-success btn-sm float-end">Sepet
 							<i class="bi bi-cart"></i>
 						</button>
 					</form>
 
-
 					<a href="@Context.Request.Headers["Referer"]" class="btn btn-secondary">Geri Dön</a>
-
-
 
 				</div>
 			</div>

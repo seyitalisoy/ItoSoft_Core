@@ -9,19 +9,24 @@
                 <h5 class="card"><a href="/Product/GetProductDetails/@item.ProductId"></a>@item.ProductName</h5>
                 <p class="card-text">@item.Description</p>
             </div>
-            <div class="card-footer">
-                <small class="text-muted">@item.Price ₺</small>
-                <a class="btn btn-primary btn-sm float-end" href="/Product/GetProductDetails/@item.ProductId">
-                    <i class="fa-solid fa-angle-right"></i> Ürün Detay
-                </a>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+                <small class="text-muted" style="font-weight: bold; font-size: 1.0rem;">@item.Price ₺</small>
+
+
                 <form asp-controller="Cart" asp-action="AddToCart" method="post" class="d-inline">
                     <input type="hidden" name="productId" value="@item.ProductId" />
-                    <button type="submit" class="btn btn-outline-success btn-sm float-end">
+                    <button type="submit" class="btn btn-outline-success btn-sm" style="margin-left: 5px;">
+                        Sepet
                         <i class="bi bi-cart"></i>
                     </button>
                 </form>
 
+                <a class="btn btn-outline-primary btn-sm" href="/Product/GetProductDetails/@item.ProductId" style="margin-left: 5px;">
+                    <i class="fa-solid fa-angle-right"></i> Ürün Detay
+                </a>
             </div>
+
+
 
         </div>
     </div>

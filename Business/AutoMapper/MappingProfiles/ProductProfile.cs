@@ -13,8 +13,8 @@ namespace Business.AutoMapper.MappingProfiles
     {
         public ProductProfile()
         {            
-            CreateMap<Product, ProductUpdateDto>();
-            CreateMap<ProductUpdateDto, Product>(); 
+            //CreateMap<Product, ProductUpdateDto>();
+            CreateMap<ProductUpdateDto, Product>(); // first coppied to second
         }
     }
 }
