@@ -28,7 +28,7 @@ namespace Business.ValidationRules
 
             RuleFor(p => p.Description).NotEmpty().WithMessage("Açıklama boş geçilemez");
             RuleFor(p => p.Description).MinimumLength(3).WithMessage("Açıklama en az 3 karakter olmalı.");
-            RuleFor(p => p.Description).MaximumLength(50).WithMessage("Açıklama en fazla 50 karakter olmalı.");
+            RuleFor(p => p.Description).MaximumLength(500).WithMessage("Açıklama en fazla 50 karakter olmalı.");
         }
     }
 }

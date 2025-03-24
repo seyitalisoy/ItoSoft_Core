@@ -18,5 +18,9 @@ namespace Business.Abstract
         IResult Delete(Order entity);
         IResult Update(Order entity);
         IDataResult<List<OrderListDto>> GetOrderDetails();
+
+        IDataResult<List<OrderListDto>> GetByOrderId(int id);
+        IDataResult<List<OrderListDto>> GetByOrderDate(DateTime date);
+        IDataResult<List<OrderListDto>> GetByEmail(string email);
     }
 }

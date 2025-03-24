@@ -25,5 +25,41 @@ namespace WebAPI.Controllers
             }
             return Ok(result);
         }
+
+        // Girilen değere göre Arama metodu değişecek 
+
+        [HttpGet("getbyorderid")]
+        public IActionResult GetOrdersByOrderId([FromQuery] int id)
+        {
+            var result = _orderService.GetByOrderId(id);
+            if (!result.Success)
+            {
+                return NotFound(result.Message);
+            }
+            return Ok(result.Data);
+        }
+
+        [HttpGet("getbyorderdate")]
+        public IActionResult GetOrdersByOrderDate([FromQuery] DateTime date)
+        {
+            var result = _orderService.GetByOrderDate(date);
+            if (!result.Success)
+            {
+                return NotFound(result.Message);
+            }
+            return Ok(result.Data);
+        }
+
+        [HttpGet("getbyemail")]
+        public IActionResult GetOrdersByEmail([FromQuery] string email)
+        {
+            var result = _orderService.GetByEmail(email);
+            if (!result.Success)
+            {
+                return NotFound(result.Message);
+            }
+            return Ok(result.Data);
+        }
+
     }
 }

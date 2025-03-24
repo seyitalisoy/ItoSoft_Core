@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\member\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\member\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\business\\concrete\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|solutionrelative:business\\concrete\\ordermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\controllers\\membercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2FE26D0C-DCE7-4D6F-BA70-35C5EF6EC083}|WebAPI\\WebAPI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE26D0C-DCE7-4D6F-BA70-35C5EF6EC083}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2FE26D0C-DCE7-4D6F-BA70-35C5EF6EC083}|WebAPI\\WebAPI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE26D0C-DCE7-4D6F-BA70-35C5EF6EC083}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\ui\\views\\member\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14B259C1-C020-4F32-943F-FE585C85D80B}|UI\\UI.csproj|solutionrelative:ui\\views\\member\\edituser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\business\\abstract\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|solutionrelative:business\\abstract\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EditUser.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Member\\EditUser.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Member\\EditUser.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Member\\EditUser.cshtml",
-              "RelativeToolTip": "UI\\Views\\Member\\EditUser.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T12:19:28.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SignUp.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Home\\SignUp.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Home\\SignUp.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Home\\SignUp.cshtml",
-              "RelativeToolTip": "UI\\Views\\Home\\SignUp.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T12:17:48.546Z",
+              "DocumentIndex": 2,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\WebAPI\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\WebAPI\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T07:55:25.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Member\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Member\\ChangePassword.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Member\\ChangePassword.cshtml",
-              "RelativeToolTip": "UI\\Views\\Member\\ChangePassword.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T12:10:28.4Z",
+              "Title": "OrderManager.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Concrete\\OrderManager.cs",
+              "RelativeDocumentMoniker": "Business\\Concrete\\OrderManager.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Concrete\\OrderManager.cs",
+              "RelativeToolTip": "Business\\Concrete\\OrderManager.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAcwEsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:58:48.633Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SignIn.cshtml",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Home\\SignIn.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Home\\SignIn.cshtml",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Views\\Home\\SignIn.cshtml",
-              "RelativeToolTip": "UI\\Views\\Home\\SignIn.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T12:10:12.436Z",
+              "DocumentIndex": 3,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Abstract\\IOrderService.cs",
+              "RelativeDocumentMoniker": "Business\\Abstract\\IOrderService.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Abstract\\IOrderService.cs",
+              "RelativeToolTip": "Business\\Abstract\\IOrderService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T06:54:58.264Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MemberController.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\MemberController.cs",
-              "RelativeDocumentMoniker": "UI\\Controllers\\MemberController.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\UI\\Controllers\\MemberController.cs",
-              "RelativeToolTip": "UI\\Controllers\\MemberController.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAA4wIgAAAAIAAAAAAAAAA==",
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\WebAPI\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\WebAPI\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T12:05:16.815Z",
+              "WhenOpened": "2025-03-24T06:52:37.328Z",
               "EditorCaption": ""
             }
           ]

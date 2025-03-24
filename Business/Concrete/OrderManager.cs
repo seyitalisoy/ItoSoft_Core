@@ -37,9 +37,46 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Order>>(_orderDal.GetAll());
         }
 
+        public IDataResult<List<OrderListDto>> GetByEmail(string email)
+        {
+            var result = _orderDal.GetOrderDetails().Where(o=>o.CustomerEmail.Contains(email)).ToList();
+            if (result.Any())
+            {
+                return new SuccessDataResult<List<OrderListDto>>(result);
+            }
+            return new ErrorDataResult<List<OrderListDto>>("Girdiğiniz mail ile uyuşan mail adresi bulunmuyor.");
+        }
+
         public IDataResult<Order> GetById(int id)
         {
             return new SuccessDataResult<Order>(_orderDal.Get(o => o.OrderId == id));
+        }
+
+        public IDataResult<List<OrderListDto>> GetByOrderDate(DateTime date)
+        {
+            var result = _orderDal.GetOrderDetails()
+                .Where(o => o.OrderDate.Day == date.Day &&
+                            o.OrderDate.Month == date.Month &&
+                            o.OrderDate.Year == date.Year)
+                .ToList();
+            if (result.Any())
+            {
+                return new SuccessDataResult<List<OrderListDto>>(result);
+            }
+            return new ErrorDataResult<List<OrderListDto>>("Bu tarihte ürün bulunamadı");
+
+            
+        }
+
+
+        public IDataResult<List<OrderListDto>> GetByOrderId(int id)
+        {
+            var result = _orderDal.GetOrderDetails().Where(o => o.OrderId == id).ToList();
+            if (result.Any())
+            {
+                return new SuccessDataResult<List<OrderListDto>>(result);
+            }
+            return new ErrorDataResult<List<OrderListDto>>("Girdiğiniz sipariş numarası bulunmuyor");
         }
 
         public IDataResult<List<OrderListDto>> GetOrderDetails()
