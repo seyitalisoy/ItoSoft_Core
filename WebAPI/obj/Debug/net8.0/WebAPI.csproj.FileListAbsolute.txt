@@ -8,9 +8,11 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\WebAPI.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\WebAPI.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Autofac.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Autofac.Extras.DynamicProxy.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\AutoMapper.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Azure.Core.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Azure.Identity.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Castle.Core.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\FluentValidation.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll

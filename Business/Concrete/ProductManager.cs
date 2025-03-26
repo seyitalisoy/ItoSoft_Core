@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules;
-using Core.Entities;
 using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
-using FluentValidation.Results;
+using FluentValidation;
+using Core.Aspects.Autofac.Validation;
 
 namespace Business.Concrete
 {
@@ -24,14 +20,9 @@ namespace Business.Concrete
             _productDal = productDal;
         }
 
+        [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product entity)
-        {
-            var validator = new ProductValidator();
-            ValidationResult validationResult = validator.Validate(entity);
-            if (!validationResult.IsValid)
-            {               
-                return new ErrorResult("Ürün Eklenmedi");
-            }
+        {            
             var result = BusinessRules.Run(CheckIfProductNameExist(entity.ProductName));
             if (result != null)
             {
@@ -62,14 +53,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Product>>(_productDal.GetAll());
         }
 
+        [ValidationAspect(typeof(ProductValidator))]
         public IResult Update(Product entity)
         {
-            var validator = new ProductValidator();
-            ValidationResult validationResult = validator.Validate(entity);
-            if (!validationResult.IsValid)
-            {                
-                return new ErrorResult("Güncelleme başarısız.");
-            }
             _productDal.Update(entity);
             return new SuccessResult("Ürün başarıyla güncellendi.");
         }

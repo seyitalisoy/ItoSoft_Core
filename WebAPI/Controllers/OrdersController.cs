@@ -26,8 +26,6 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
-        // Girilen değere göre Arama metodu değişecek 
-
         [HttpGet("getbyorderid")]
         public IActionResult GetOrdersByOrderId([FromQuery] int id)
         {

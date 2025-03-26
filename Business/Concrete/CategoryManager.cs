@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules;
+using Core.Aspects.Autofac.Validation;
+using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
@@ -25,15 +27,9 @@ namespace Business.Concrete
             _categoryDal = categoryDal;
         }
 
+        [ValidationAspect(typeof(CategoryValidator))]
         public IResult Add(Category entity)
         {
-            var validator = new CategoryValidator();
-            ValidationResult validationResult = validator.Validate(entity);
-            if (!validationResult.IsValid)
-            {                
-                return new ErrorResult();
-            }
-
             IResult result = BusinessRules.Run(CheckIfCategoryNameExist(entity.CategoryName), CheckIfCategoryLimitExceded());
             if (result!=null)
             {
@@ -59,14 +55,9 @@ namespace Business.Concrete
             return new SuccessDataResult<Category>(_categoryDal.Get(c => c.CategoryId == id));
         }
 
+        [ValidationAspect(typeof(CategoryValidator))]
         public IResult Update(Category entity)
-        {
-            var validator = new CategoryValidator();
-            ValidationResult validationResult = validator.Validate(entity);
-            if (!validationResult.IsValid)
-            {
-                return new ErrorResult("Güncelleme başarısız.");
-            }
+        {    
             _categoryDal.Update(entity);
             return new SuccessResult("Kategori başarıyla güncellendi.");
         }
