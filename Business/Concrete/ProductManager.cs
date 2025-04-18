@@ -8,6 +8,7 @@ using DataAccess.Abstract;
 using Entities.Concrete;
 using FluentValidation;
 using Core.Aspects.Autofac.Validation;
+using Business.BusinessAspects.Autofac;
 
 namespace Business.Concrete
 {
@@ -20,6 +21,7 @@ namespace Business.Concrete
             _productDal = productDal;
         }
 
+        [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product entity)
         {            
