@@ -22,8 +22,6 @@ namespace Business.BusinessAspects.Autofac
 
         protected override void OnBefore(IInvocation invocation)
         {
-            //var isAuth = "IsAuthenticated: " + _httpContextAccessor.HttpContext?.User?.Identity?.IsAuthenticated;
-            //var allClaims = "Claims Count: " + _httpContextAccessor.HttpContext?.User?.Claims?.Count();
 
             var roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();
             foreach (var role in _roles)

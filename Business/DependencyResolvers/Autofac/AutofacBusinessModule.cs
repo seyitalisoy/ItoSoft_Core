@@ -8,6 +8,7 @@ using Core.Utilities.Interceptors;
 using Core.Utilities.Security.Jwt;
 using DataAccess.Abstract;
 using DataAccess.Concrete;
+using Microsoft.AspNetCore.Http;
 
 namespace Business.DependencyResolvers.Autofac
 {

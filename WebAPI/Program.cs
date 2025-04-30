@@ -46,6 +46,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddDependencyResolvers(new CoreModule());
 
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -87,6 +88,9 @@ app.UseAuthentication();
 //    await next();
 //});
 
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 
 app.UseAuthorization();

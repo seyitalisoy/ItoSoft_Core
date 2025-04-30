@@ -17,7 +17,6 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\FluentValidation
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
