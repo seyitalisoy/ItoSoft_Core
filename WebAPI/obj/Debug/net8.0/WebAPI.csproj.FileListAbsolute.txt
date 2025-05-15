@@ -112,3 +112,6 @@ D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\obj\Debug\net8.0\refint\WebAPI.dl
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\obj\Debug\net8.0\WebAPI.pdb
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\obj\Debug\net8.0\WebAPI.genruntimeconfig.cache
 D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\obj\Debug\net8.0\ref\WebAPI.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\itoSoft\vs_Projects\Core\ItoSoftCore\WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll

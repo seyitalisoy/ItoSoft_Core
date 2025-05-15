@@ -9,6 +9,7 @@ using Entities.Concrete;
 using FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Business.BusinessAspects.Autofac;
+using Core.Aspects.Autofac.Caching;
 
 namespace Business.Concrete
 {
@@ -23,6 +24,7 @@ namespace Business.Concrete
 
         [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product entity)
         {            
             var result = BusinessRules.Run(CheckIfProductNameExist(entity.ProductName));
@@ -34,12 +36,14 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductAdded);
         }
 
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Delete(Product entity)
         {
             _productDal.Delete(entity);
             return new SuccessResult("Ürün silindi.");
         }
 
+        [CacheAspect]
         public IDataResult<Product> GetById(int id)
         {
             var result = _productDal.Get(p => p.ProductId == id);
@@ -50,12 +54,14 @@ namespace Business.Concrete
             return new ErrorDataResult<Product>("Ürün bulunamadı");
         }
 
+        [CacheAspect]
         public IDataResult<List<Product>> GetAll()
         {
-            return new SuccessDataResult<List<Product>>(_productDal.GetAll());
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(),"ürünler yüklendi");
         }
 
         [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult Update(Product entity)
         {
             _productDal.Update(entity);
@@ -73,6 +79,7 @@ namespace Business.Concrete
 
         }
 
+        [CacheRemoveAspect("IProductService.Get")]
         public IResult DeleteById(int id)
         {
             var result = _productDal.Get(p => p.ProductId == id);

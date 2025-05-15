@@ -4866,6 +4866,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.Extensions.Configuration.Binder": "8.0.0",
           "Microsoft.IdentityModel.Tokens": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
+          "StackExchange.Redis": "2.8.37",
           "System.IdentityModel.Tokens.Jwt": "8.0.0"
         },
         "compile": {
@@ -14117,5 +14119,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: Detected package downgrade: StackExchange.Redis from 2.8.37 to 2.8.31. Reference the package directly from the project to select a different version. \r\n UI -> Core -> StackExchange.Redis (>= 2.8.37) \r\n UI -> StackExchange.Redis (>= 2.8.31)",
+      "libraryId": "StackExchange.Redis",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

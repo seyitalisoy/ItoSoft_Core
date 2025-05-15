@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\business\\businessaspects\\autofac\\securedoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|solutionrelative:business\\businessaspects\\autofac\\securedoperation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\utilities\\helpers\\cachehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\utilities\\helpers\\cachehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\extensions\\claimextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\extensions\\claimextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\utilities\\security\\jwt\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\utilities\\security\\jwt\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\aspects\\autofac\\caching\\cacheaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\aspects\\autofac\\caching\\cacheaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SecuredOperation.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\BusinessAspects\\Autofac\\SecuredOperation.cs",
-              "RelativeDocumentMoniker": "Business\\BusinessAspects\\Autofac\\SecuredOperation.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\BusinessAspects\\Autofac\\SecuredOperation.cs",
-              "RelativeToolTip": "Business\\BusinessAspects\\Autofac\\SecuredOperation.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBcAAAAJAAAAAAAAAA==",
+              "Title": "CacheHelper.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Utilities\\Helpers\\CacheHelper.cs",
+              "RelativeDocumentMoniker": "Core\\Utilities\\Helpers\\CacheHelper.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Utilities\\Helpers\\CacheHelper.cs",
+              "RelativeToolTip": "Core\\Utilities\\Helpers\\CacheHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:38:40.505Z",
+              "WhenOpened": "2025-05-15T10:01:32.519Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ClaimExtensions.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Extensions\\ClaimExtensions.cs",
-              "RelativeDocumentMoniker": "Core\\Extensions\\ClaimExtensions.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Extensions\\ClaimExtensions.cs",
-              "RelativeToolTip": "Core\\Extensions\\ClaimExtensions.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Title": "CacheAspect.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Caching\\CacheAspect.cs",
+              "RelativeDocumentMoniker": "Core\\Aspects\\Autofac\\Caching\\CacheAspect.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Caching\\CacheAspect.cs",
+              "RelativeToolTip": "Core\\Aspects\\Autofac\\Caching\\CacheAspect.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:35:35.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JwtHelper.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Utilities\\Security\\Jwt\\JwtHelper.cs",
-              "RelativeDocumentMoniker": "Core\\Utilities\\Security\\Jwt\\JwtHelper.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Utilities\\Security\\Jwt\\JwtHelper.cs",
-              "RelativeToolTip": "Core\\Utilities\\Security\\Jwt\\JwtHelper.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T08:35:21.12Z",
+              "WhenOpened": "2025-05-14T10:56:30.014Z",
               "EditorCaption": ""
             }
           ]
