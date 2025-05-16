@@ -10,6 +10,7 @@ using FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Business.BusinessAspects.Autofac;
 using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Transaction;
 
 namespace Business.Concrete
 {
@@ -24,13 +25,15 @@ namespace Business.Concrete
 
         [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]
-        [CacheRemoveAspect("IProductService.Get")]
+        [CacheRemoveAspect("IProductService.Get")]        
         public IResult Add(Product entity)
         {            
             var result = BusinessRules.Run(CheckIfProductNameExist(entity.ProductName));
             if (result != null)
             {
-                return result;
+                //return result;
+                // Use 'throw' instead of 'return' to trigger rollback in methods using TransactionScopeAspect
+                throw new Exception("Ürün ekleme başarısız."); 
             }
             _productDal.Add(entity);
             return new SuccessResult(Messages.ProductAdded);
@@ -62,9 +65,10 @@ namespace Business.Concrete
 
         [ValidationAspect(typeof(ProductValidator))]
         [CacheRemoveAspect("IProductService.Get")]
+        //[TransactionScopeAspect]
         public IResult Update(Product entity)
         {
-            _productDal.Update(entity);
+            _productDal.Update(entity);            
             return new SuccessResult("Ürün başarıyla güncellendi.");
         }
 
