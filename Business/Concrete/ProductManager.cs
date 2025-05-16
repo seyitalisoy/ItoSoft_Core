@@ -11,6 +11,7 @@ using Core.Aspects.Autofac.Validation;
 using Business.BusinessAspects.Autofac;
 using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Transaction;
+using Core.Aspects.Autofac.Performance;
 
 namespace Business.Concrete
 {
@@ -58,8 +59,11 @@ namespace Business.Concrete
         }
 
         [CacheAspect]
+        [PerformanceAspect(3)]        
         public IDataResult<List<Product>> GetAll()
         {
+            //Thread.Sleep(4000);  --> PerformenceAspect testing
+
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(),"ürünler yüklendi");
         }
 

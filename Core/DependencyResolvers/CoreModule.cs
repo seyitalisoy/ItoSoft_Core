@@ -10,22 +10,26 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
 using Microsoft.Extensions.Configuration;
+using Autofac.Core;
+using System.Diagnostics;
 
 namespace Core.DependencyResolvers
 {
     public class CoreModule : ICoreModule
     {
-        public void Load(IServiceCollection serviceCollection)
+        public void Load(IServiceCollection services)
         {
-            serviceCollection.AddScoped<IHttpContextAccessor,HttpContextAccessor>();
+            services.AddScoped<IHttpContextAccessor,HttpContextAccessor>();
 
-            serviceCollection.AddSingleton<IConnectionMultiplexer>(sp =>
+            services.AddSingleton<IConnectionMultiplexer>(sp =>
             {
                 var config = sp.GetService<IConfiguration>();
                 var redisConfiguration = config.GetSection("Redis:Configuration").Value;
                 return ConnectionMultiplexer.Connect(redisConfiguration);
             });
-            serviceCollection.AddSingleton<ICacheManager, RedisCacheManager>();
+            services.AddSingleton<ICacheManager, RedisCacheManager>();
+
+            services.AddSingleton<Stopwatch>();
         }
     }
 }

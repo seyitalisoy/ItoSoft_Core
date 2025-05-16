@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{674C806C-44DA-4EAE-BF4A-4F2F2592D92C}|Business\\Business.csproj|solutionrelative:business\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\aspects\\autofac\\transaction\\transactionscopeaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\aspects\\autofac\\transaction\\transactionscopeaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\aspects\\autofac\\performance\\performanceaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\aspects\\autofac\\performance\\performanceaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\utilities\\interceptors\\methodinterception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\utilities\\interceptors\\methodinterception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\aspects\\autofac\\caching\\cacheremoveaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\aspects\\autofac\\caching\\cacheremoveaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\aspects\\autofac\\validation\\validationaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\aspects\\autofac\\validation\\validationaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\crosscuttingconcerns\\validation\\validationtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\crosscuttingconcerns\\validation\\validationtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\dependencyresolvers\\coremodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\dependencyresolvers\\coremodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|d:\\itosoft\\vs_projects\\core\\itosoftcore\\core\\utilities\\interceptors\\aspectinterceptorselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39AAD430-489F-474E-B388-C8EF608379CF}|Core\\Core.csproj|solutionrelative:core\\utilities\\interceptors\\aspectinterceptorselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +34,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CacheRemoveAspect.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Caching\\CacheRemoveAspect.cs",
+              "RelativeDocumentMoniker": "Core\\Aspects\\Autofac\\Caching\\CacheRemoveAspect.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Caching\\CacheRemoveAspect.cs",
+              "RelativeToolTip": "Core\\Aspects\\Autofac\\Caching\\CacheRemoveAspect.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:31:41.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ValidationTool.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\CrossCuttingConcerns\\Validation\\ValidationTool.cs",
+              "RelativeDocumentMoniker": "Core\\CrossCuttingConcerns\\Validation\\ValidationTool.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\CrossCuttingConcerns\\Validation\\ValidationTool.cs",
+              "RelativeToolTip": "Core\\CrossCuttingConcerns\\Validation\\ValidationTool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:31:41.86Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,48 +70,48 @@
               "RelativeDocumentMoniker": "Business\\Concrete\\ProductManager.cs",
               "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Business\\Concrete\\ProductManager.cs",
               "RelativeToolTip": "Business\\Concrete\\ProductManager.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAiwBoAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAIwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:51:42.056Z",
+              "WhenOpened": "2025-05-16T11:30:16.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AspectInterceptorSelector.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Utilities\\Interceptors\\AspectInterceptorSelector.cs",
+              "RelativeDocumentMoniker": "Core\\Utilities\\Interceptors\\AspectInterceptorSelector.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Utilities\\Interceptors\\AspectInterceptorSelector.cs",
+              "RelativeToolTip": "Core\\Utilities\\Interceptors\\AspectInterceptorSelector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:26:14.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CoreModule.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\DependencyResolvers\\CoreModule.cs",
+              "RelativeDocumentMoniker": "Core\\DependencyResolvers\\CoreModule.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\DependencyResolvers\\CoreModule.cs",
+              "RelativeToolTip": "Core\\DependencyResolvers\\CoreModule.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:20:16.662Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TransactionScopeAspect.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Transaction\\TransactionScopeAspect.cs",
-              "RelativeDocumentMoniker": "Core\\Aspects\\Autofac\\Transaction\\TransactionScopeAspect.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Transaction\\TransactionScopeAspect.cs",
-              "RelativeToolTip": "Core\\Aspects\\Autofac\\Transaction\\TransactionScopeAspect.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Title": "PerformanceAspect.cs",
+              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Performance\\PerformanceAspect.cs",
+              "RelativeDocumentMoniker": "Core\\Aspects\\Autofac\\Performance\\PerformanceAspect.cs",
+              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Performance\\PerformanceAspect.cs",
+              "RelativeToolTip": "Core\\Aspects\\Autofac\\Performance\\PerformanceAspect.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:51:11.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ValidationAspect.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
-              "RelativeDocumentMoniker": "Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
-              "RelativeToolTip": "Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwA8AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:40:57.602Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MethodInterception.cs",
-              "DocumentMoniker": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Utilities\\Interceptors\\MethodInterception.cs",
-              "RelativeDocumentMoniker": "Core\\Utilities\\Interceptors\\MethodInterception.cs",
-              "ToolTip": "D:\\itoSoft\\vs_Projects\\Core\\ItoSoftCore\\Core\\Utilities\\Interceptors\\MethodInterception.cs",
-              "RelativeToolTip": "Core\\Utilities\\Interceptors\\MethodInterception.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T12:40:22.686Z",
+              "WhenOpened": "2025-05-16T11:16:24.977Z",
               "EditorCaption": ""
             }
           ]
