@@ -40,7 +40,7 @@ namespace Business.Concrete
             return new SuccessResult(Messages.ProductAdded);
         }
 
-        [CacheRemoveAspect("IProductService.Get")]
+        [CacheRemoveAspect("IProductService.Get")]        
         public IResult Delete(Product entity)
         {
             _productDal.Delete(entity);

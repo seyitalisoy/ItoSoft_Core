@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Business.Abstract;
 using Business.Constants;
 using Business.ValidationRules;
+using Core.Aspects.Autofac.Caching;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Business;
@@ -27,7 +28,9 @@ namespace Business.Concrete
             _categoryDal = categoryDal;
         }
 
+
         [ValidationAspect(typeof(CategoryValidator))]
+        [CacheRemoveAspect("ICategoryService.Get")]
         public IResult Add(Category entity)
         {
             IResult result = BusinessRules.Run(CheckIfCategoryNameExist(entity.CategoryName), CheckIfCategoryLimitExceded());
@@ -39,23 +42,27 @@ namespace Business.Concrete
             return new SuccessResult(Messages.CategoryAdded);
         }
 
+        [CacheRemoveAspect("ICategoryService.Get")]
         public IResult Delete(Category entity)
         {
             _categoryDal.Delete(entity);
             return new SuccessResult();
         }
 
+        [CacheAspect]
         public IDataResult<List<Category>> GetAll()
         {
             return new SuccessDataResult<List<Category>>(_categoryDal.GetAll());
         }
 
+        [CacheAspect]
         public IDataResult<Category> GetById(int id)
         {
             return new SuccessDataResult<Category>(_categoryDal.Get(c => c.CategoryId == id));
         }
 
         [ValidationAspect(typeof(CategoryValidator))]
+        [CacheRemoveAspect("ICategoryService.Get")]
         public IResult Update(Category entity)
         {    
             _categoryDal.Update(entity);
