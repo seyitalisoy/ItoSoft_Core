@@ -11,19 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin()
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
+builder.Services.AddCors();
 
 builder.Services.AddControllers();
 
@@ -68,28 +56,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAll");
+app.UseCors(builder=> builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
 
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 
-//app.Use(async (context, next) =>
-//{
-//    Console.WriteLine($"[MIDDLEWARE] IsAuthenticated: {context.User.Identity?.IsAuthenticated}");
-//    Console.WriteLine($"[MIDDLEWARE] Name: {context.User.Identity?.Name}");
-//    Console.WriteLine($"[MIDDLEWARE] Claims Count: {context.User.Claims?.Count()}");
-
-//    if (!context.User.Identity?.IsAuthenticated ?? true)
-//    {
-//        Console.WriteLine("[MIDDLEWARE] Kullanýcý kimliði doðrulanmadý.");
-//    }
-
-//    await next();
-//});
-
-
 app.UseAuthentication();
+
 app.UseAuthorization();
 
 
