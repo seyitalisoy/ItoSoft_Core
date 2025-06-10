@@ -11,11 +11,12 @@ namespace Business.Abstract
     public interface IProductService
     {
         IDataResult<List<Product>> GetAll();
-
+        
         IDataResult<Product> GetById(int id);
         IResult Add(Product entity);
         IResult Delete(Product entity);
         IResult Update(Product entity);
         IResult DeleteById(int id);
+        IDataResult<List<Product>> GetByCategoryId(int categoryId);
     }
 }

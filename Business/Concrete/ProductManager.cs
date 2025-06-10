@@ -98,5 +98,16 @@ namespace Business.Concrete
             }
             return new ErrorResult("Ürün bulunamadı.");
         }
+
+        [CacheAspect]
+        public IDataResult<List<Product>> GetByCategoryId(int categoryId)
+        {
+            var result = _productDal.GetAll().Where(x => x.CategoryId==categoryId).ToList();
+            if (result.Any())
+            {
+                return new SuccessDataResult<List<Product>>(result);
+            }
+            return new ErrorDataResult<List<Product>>($"{categoryId} no'lu ürünler bulunamadı");
+        }
     }
 }
